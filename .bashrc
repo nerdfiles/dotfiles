@@ -1,7 +1,16 @@
+# ============================================= PATHS == #
+
+export PATH=$PATH:/usr/local/git/bin
+source ~/.cinderella.profile
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
 
-function setdsm() {
+# ============================================= PYTHON == #
+
+alias python='python2.7'
+alias servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
+
+function set_django() {
     # add the current directory and the parent directory to PYTHONPATH
     # sets DJANGO_SETTINGS_MODULE
     export PYTHONPATH=$PYTHONPATH:$PWD/..
@@ -16,51 +25,76 @@ function setdsm() {
         echo "DJANGO_SETTINGS_MODULE set to $DJANGO_SETTINGS_MODULE"
 }
 
-# ====================================================== Aliases == #
+# ============================================= ALIASES == #
 
-alias ntp="sudo /usr/sbin/ntpdate time-a.nist.gov"
+# == Dir navigation == #
 
 alias ..='cd ..'
+#alias cd..='cd ..'
 alias .='echo $PWD'
 alias ~='cd ~'
+#alias more='less'
 
-alias python='python2.7'
+# == File/Dir Managemenet == #
 
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-
 alias mkdir='mkdir -p'
-#colors
-#alias ls='ls --color'
-#alias ls='ls -hp --time-style=locale --color' 
+
+# ============================================= MORE ALIASES == #
+
+alias ntp="sudo /usr/sbin/ntpdate time-a.nist.gov"
+#alias nano='nano -w'
+alias vim='vim -X'
+#alias xcomp='xcompmgr -cCfF -r7 -o.65 -l-10 -t-8 -D7'
+#alias m='mate'
+#alias ss='./script/server'
+
+# ============================================= COLORS == #
+
 # @see http://norbauer.com/notebooks/code/notes/ls-colors-and-terminal-app
-export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
-alias lsa='ls -laG'
+# @see http://plug-and-pray.blogspot.com/2008/02/lscolors.html
+
+# == Setup == #
+
+DIR=fx
+SYM_LINK=gx
+SOCKET=fx
+PIPE=ax
+EXE=cx
+BLOCK_SP=dx
+CHAR_SP=dx
+EXE_SUID=hb
+EXE_GUID=ad
+DIR_STICKY=ex
+DIR_WO_STICKY=ax
+export LSCOLORS="$DIR$SYM_LINK$SOCKET$PIPE$EXE$BLOCK_SP$CHAR_SP$EXE_SUID$EXE_GUID$DIR_STICKY$DIR_WO_STICKY"
+export CLICOLOR="YES"
+
+# == Aliases == #
+
 alias ls='ls -G'
+alias lsa='ls -laG'
 alias grep='grep --color=auto'
-#alias ncmpc='ncmpc -c'
-#unicode
+
+# ============================================= UNICODE == #
+
 #alias xterm='xterm -u8'
 #alias screen='screen -U'
-#sudo
+
+# ============================================= SUDO == #
+
 #alias root='sudo su'
 #alias pacman='sudo pacman'
 #alias apt-get='sudo apt-get'
 #alias aptitude='sudo aptitude'
-#
-#alias cd..='cd ..'
-#alias more='less'
-#alias nano='nano -w'
-alias vim='vim -X'
-#alias xcomp='xcompmgr -cCfF -r7 -o.65 -l-10 -t-8 -D7'
-alias servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
-#alias m='mate'
-#alias ss='./script/server'
 
-###Console
-#makes console terminal pretty
-#slightly modified phraktured's
+# ============================================= CONSOLE == #
+
+# Makes console terminal pretty
+# Slightly modified phraktured's
+
 if [ "$TERM" = "linux" ]; then
     echo -en "\e]P0121212" #black
     echo -en "\e]P8474747" #darkgrey
@@ -81,8 +115,8 @@ if [ "$TERM" = "linux" ]; then
     clear #for background artifacting
 fi
 
+# ============================================= MORE COLORS == #
 
-#more colors!
 if [ -f ~/.dir_colors ]; then
             eval `dircolors ~/.dir_colors`
 fi
