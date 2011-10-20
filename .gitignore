@@ -1,7 +1,20 @@
-# OS Level
+# File types 
 
-.DS_Store
+*.pyc
+*.swo
+*.swp
+    *.swn
 
-# Project Level
+# Directorieso
 
-# Web/Security Level
+logs/
+
+# Specific files 
+projectname/settings.py
+
+# OS generated files 
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+*~
