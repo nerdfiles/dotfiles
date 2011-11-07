@@ -1,13 +1,29 @@
 # ============================================= PATHS == #
 
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Sites
+VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/2.7/bin/python
+export PIP_VIRTUALENV_BASE=$WORKON_HOME # Tell pip to create its virtualenvs in $WORKON_HOME.
+export PIP_RESPECT_VIRTUALENV=true # Tell pip to automatically use the currently active virtualenv.
 export PATH=$PATH:/usr/local/git/bin
 source ~/.cinderella.profile
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
 
+NODE_PATH="/Users/pbdigital/Developer/lib/node_modules"
+export NODE_PATH
+
+set EDITOR="vim" 
+export EDITOR="vim"
+
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
+
 # ============================================= PYTHON == #
 
 alias python='python2.7'
+alias ppacks='cd /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/'
 alias servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
 
 function set_django() {
@@ -120,3 +136,7 @@ fi
 if [ -f ~/.dir_colors ]; then
             eval `dircolors ~/.dir_colors`
 fi
+
+alias macvim='open -a MacVim'
+
+source ~/.bash_profile
