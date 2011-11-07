@@ -15,7 +15,7 @@ django-cms-search==0.4.1
 django-debug-toolbar==0.8.5
 django-extensions==0.7.1
 #django-filer==0.9a1
--e git://github.com/stefanfoulis/django-filer.git#egg=django-filer
+-e git://github.com/stefanfoulis/django-filer.git@develop#egg=django-filer
 django-haystack==1.2.5
 django-mptt==0.5.0
 django-polymorphic==0.2
