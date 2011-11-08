@@ -1,3 +1,3 @@
 # dotfiles fork
 
-See Pennebaker's master repository.
+Personal config files and dotfiles; abstractions, schemas, scripts and workflows.
