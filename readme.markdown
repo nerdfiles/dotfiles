@@ -1,3 +1,3 @@
-# dotfiles
+# dotfiles fork
 
-A collection of in-house dotfiles to more easily and quickly configure Pennebaker workstations. Combining OSX, Ubuntu, repos into one master set.
+See Pennebaker's master repository.
