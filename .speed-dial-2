@@ -3,7 +3,7 @@
     "thumbnails_been_converted": "1",
     "options.order": "position",
     "options.showContextMenu": "1",
-    "sys.rows": "3",
+    "sys.rows": "1",
     "options.padding": "12",
     "options.colors.title": "FFFFFF",
     "options.background": "http://farm6.static.flickr.com/5134/5565626330_a8ef933e18_o.jpg",
@@ -57,7 +57,7 @@
     "requestThumbnail": "null",
     "options.thumbnailQuality": "high",
     "options.apps.position": "bottom",
-    "options.customCss": "null",
+    "options.customCss": "#menu li { font-size: 24px; }\n/*#groups { width: 100%; }*/\n#groups li a { font-size: 24px !important; }\n/*#groups li:first-child:before { content: \"∃\"; font-size: 24px; color: #fff; }*/",
     "options.colors.dialbgover": "FFFFFF",
     "sys.cellspacing": "24",
     "options.sidebar.showBookmarksURL": "1",
@@ -161,10 +161,10 @@
       "url": "https://github.com/",
       "thumbnail": "https://a248.e.akamai.net/assets.github.com/images/modules/header/logov6-hover.svg",
       "ts_created": 1320731884,
-      "visits": 5,
+      "visits": 6,
       "visits_morning": 3,
       "visits_afternoon": 0,
-      "visits_evening": 0,
+      "visits_evening": 1,
       "visits_night": 2,
       "position": 4,
       "idgroup": 0
@@ -203,10 +203,10 @@
       "url": "http://www.last.fm/user/wittysense",
       "thumbnail": "http://farm6.static.flickr.com/5228/5612548029_964fc1fa0b_o.png",
       "ts_created": 1320732848,
-      "visits": 2,
+      "visits": 3,
       "visits_morning": 0,
       "visits_afternoon": 0,
-      "visits_evening": 0,
+      "visits_evening": 1,
       "visits_night": 2,
       "position": 5,
       "idgroup": 13
@@ -483,10 +483,10 @@
       "url": "http://kippt.com/",
       "thumbnail": "http://kippt.com/static/img/kippt-150.png",
       "ts_created": 1320726462,
-      "visits": 3,
+      "visits": 4,
       "visits_morning": 1,
       "visits_afternoon": 0,
-      "visits_evening": 2,
+      "visits_evening": 3,
       "visits_night": 0,
       "position": 999,
       "idgroup": 1
@@ -1041,7 +1041,7 @@
       "id": 70,
       "title": "creativetechs.com/tips/tip_resources/PocketMod/MacOSX-Shortcuts-PocketMod.pdf",
       "url": "http://creativetechs.com/tips/tip_resources/PocketMod/MacOSX-Shortcuts-PocketMod.pdf",
-      "thumbnail": "http://fc06.deviantart.net/fs41/f/2009/042/5/5/Leopard_OS_X_Wallpaper_RED_by_thevolumerocker.jpg",
+      "thumbnail": "http://images.wikia.com/ipod/images/3/3a/Apple_logo_Think_Different.png",
       "ts_created": 1320772920,
       "visits": 0,
       "visits_morning": 0,
@@ -1203,7 +1203,7 @@
       "visits_evening": 0,
       "visits_night": 0,
       "position": 999,
-      "idgroup": 1
+      "idgroup": 6
     },
     "81": {
       "id": 82,
@@ -1218,6 +1218,34 @@
       "visits_night": 0,
       "position": 999,
       "idgroup": 10
+    },
+    "82": {
+      "id": 83,
+      "title": "House - Full Episodes and Clips streaming online - Hulu",
+      "url": "http://www.hulu.com/watch/285043/house-twenty-vicodin#s-p1-so-i0",
+      "thumbnail": "http://www.i-moviechannel.com/wp-content/uploads/2011/08/House-Season-8-300x300.jpg",
+      "ts_created": 1320801430,
+      "visits": 1,
+      "visits_morning": 0,
+      "visits_afternoon": 0,
+      "visits_evening": 1,
+      "visits_night": 0,
+      "position": 999,
+      "idgroup": 4
+    },
+    "83": {
+      "id": 84,
+      "title": "HTML5 Boilerplate - A rock-solid default template for HTML5 awesome.",
+      "url": "http://html5boilerplate.com/",
+      "thumbnail": "http://makeawesomeweb.com/wp-content/uploads/2011/02/HTML5-Boilerplate1.png",
+      "ts_created": 1320813580,
+      "visits": 0,
+      "visits_morning": 0,
+      "visits_afternoon": 0,
+      "visits_evening": 0,
+      "visits_night": 0,
+      "position": 999,
+      "idgroup": 17
     }
   },
   "groups": {
@@ -1229,7 +1257,7 @@
     },
     "1": {
       "id": 12,
-      "title": "▤",
+      "title": "☱",
       "color": "FFFFFF",
       "position": 3
     },
@@ -1240,76 +1268,82 @@
       "position": 4
     },
     "3": {
-      "id": 16,
-      "title": "m/⚙",
+      "id": 17,
+      "title": "✪",
       "color": "FFFFFF",
       "position": 5
     },
     "4": {
-      "id": 2,
-      "title": "⊛",
+      "id": 16,
+      "title": "✆",
       "color": "FFFFFF",
       "position": 6
     },
     "5": {
-      "id": 14,
-      "title": "✍",
+      "id": 2,
+      "title": "⊛",
       "color": "FFFFFF",
       "position": 7
     },
     "6": {
-      "id": 13,
-      "title": "♬",
+      "id": 14,
+      "title": "✍",
       "color": "FFFFFF",
       "position": 8
     },
     "7": {
-      "id": 7,
-      "title": "░",
+      "id": 13,
+      "title": "♬",
       "color": "FFFFFF",
       "position": 9
     },
     "8": {
-      "id": 3,
-      "title": "♛",
+      "id": 7,
+      "title": "░",
       "color": "FFFFFF",
       "position": 10
     },
     "9": {
-      "id": 5,
-      "title": "☕",
+      "id": 3,
+      "title": "♛",
       "color": "FFFFFF",
       "position": 11
     },
     "10": {
-      "id": 10,
-      "title": "♚",
+      "id": 5,
+      "title": "☕",
       "color": "FFFFFF",
       "position": 12
     },
     "11": {
-      "id": 15,
-      "title": "⊞",
+      "id": 10,
+      "title": "♚",
       "color": "FFFFFF",
       "position": 13
     },
     "12": {
-      "id": 4,
-      "title": "⬚",
+      "id": 15,
+      "title": "⊞",
       "color": "FFFFFF",
       "position": 14
     },
     "13": {
-      "id": 9,
-      "title": "⧈",
+      "id": 4,
+      "title": "⊑",
       "color": "FFFFFF",
       "position": 15
     },
     "14": {
+      "id": 9,
+      "title": "⧈",
+      "color": "FFFFFF",
+      "position": 16
+    },
+    "15": {
       "id": 11,
       "title": "$",
       "color": "FFFFFF",
-      "position": 16
+      "position": 17
     }
   }
 }
