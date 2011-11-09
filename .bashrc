@@ -1,3 +1,5 @@
+# ============================================= VIRTUALENV/WRAPPER == #
+
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Sites
 export VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/2.7/bin/python
@@ -5,7 +7,16 @@ export PIP_VIRTUALENV_BASE=$WORKON_HOME # Tell pip to create its virtualenvs in 
 export PIP_REQUIRE_VIRTUALENV=true
 export PIP_RESPECT_VIRTUALENV=true # Tell pip to automatically use the currently active virtualenv.
 
-#============================================= PYTHON == #
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+# ============================================= NODE == #
+
+NODE_PATH="/Users/pbdigital/Developer/lib/node_modules"
+export NODE_PATH
+
+# ============================================= PYTHON == #
 
 alias servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
 export NODE_PATH="/usr/local/lib/node_modules"
@@ -117,5 +128,11 @@ if [ "$TERM" = "linux" ]; then
 fi
 
 # ============================================= MORE COLORS == #
+
+if [ -f ~/.dir_colors ]; then
+  eval `dircolors ~/.dir_colors`
+fi
+
+# ============================================= BASH? == #
 
 source ~/.bash_profile
