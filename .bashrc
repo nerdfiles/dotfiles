@@ -1,26 +1,14 @@
-# ============================================= PATHS == #
-
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Sites
-VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/2.7/bin/python
+export VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/2.7/bin/python
 export PIP_VIRTUALENV_BASE=$WORKON_HOME # Tell pip to create its virtualenvs in $WORKON_HOME.
+export PIP_REQUIRE_VIRTUALENV=true
 export PIP_RESPECT_VIRTUALENV=true # Tell pip to automatically use the currently active virtualenv.
-export PATH=$PATH:/usr/local/git/bin
-source ~/.cinderella.profile
-#PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-#export PATH
 
-NODE_PATH="/Users/pbdigital/Developer/lib/node_modules"
-export NODE_PATH
+#============================================= PYTHON == #
 
-set EDITOR="vim" 
-export EDITOR="vim"
-
-# ============================================= PYTHON == #
-
-alias python='python2.7'
-alias ppacks='cd /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/'
 alias servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
+export NODE_PATH="/usr/local/lib/node_modules"
 
 function set_django() {
     # add the current directory and the parent directory to PYTHONPATH
@@ -56,6 +44,7 @@ alias mkdir='mkdir -p'
 
 # ============================================= MORE ALIASES == #
 
+alias macvim='open -a /Applications/MacVim/MacVim.app/Contents/MacOS/MacVim'
 alias ntp="sudo /usr/sbin/ntpdate time-a.nist.gov"
 #alias nano='nano -w'
 alias vim='vim -X'
@@ -129,11 +118,4 @@ fi
 
 # ============================================= MORE COLORS == #
 
-if [ -f ~/.dir_colors ]; then
-  eval `dircolors ~/.dir_colors`
-fi
-
-alias macvim='open -a MacVim'
-
 source ~/.bash_profile
-
