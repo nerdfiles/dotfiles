@@ -7,18 +7,14 @@ export PIP_VIRTUALENV_BASE=$WORKON_HOME # Tell pip to create its virtualenvs in 
 export PIP_RESPECT_VIRTUALENV=true # Tell pip to automatically use the currently active virtualenv.
 export PATH=$PATH:/usr/local/git/bin
 source ~/.cinderella.profile
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-export PATH
+#PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+#export PATH
 
 NODE_PATH="/Users/pbdigital/Developer/lib/node_modules"
 export NODE_PATH
 
 set EDITOR="vim" 
 export EDITOR="vim"
-
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-  source /usr/local/bin/virtualenvwrapper.sh
-fi
 
 # ============================================= PYTHON == #
 
@@ -134,7 +130,7 @@ fi
 # ============================================= MORE COLORS == #
 
 if [ -f ~/.dir_colors ]; then
-            eval `dircolors ~/.dir_colors`
+  eval `dircolors ~/.dir_colors`
 fi
 
 alias macvim='open -a MacVim'
