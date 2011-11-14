@@ -15,7 +15,7 @@
     "refresh_create": "false",
     "options.colors.dialbginner": "FFFFFF",
     "options.sidebar.showBookmarks": "1",
-    "sys.containerwidth": "1383.8999999999999px",
+    "sys.containerwidth": "1480.8px",
     "options.colors.borderover": "FFFFFF",
     "options.repeatbackground": "no-repeat",
     "options.titleAlign": "right",
@@ -30,7 +30,7 @@
     "options.showAddButton": "1",
     "options.dialstyle.corners": "12",
     "v1573": "false",
-    "sys.dialheight": "152.01848958333332",
+    "sys.dialheight": "161.01874999999998",
     "options.colors.dialbgover": "FFFFFF",
     "options.refreshThumbnails": "0",
     "options.apps.show": "1",
@@ -46,7 +46,7 @@
     "options.colors.dialbginnerover": "FFFFFF",
     "options.useDeliciousShortcut": "1",
     "options.colors.border": "FFFFFF",
-    "sys.dialwidth": "210.64999999999998",
+    "sys.dialwidth": "226.79999999999998",
     "firstTime": "false",
     "options.centerVertically": "0",
     "options.sidebar": "1",
@@ -1399,7 +1399,7 @@
       "visits_evening": 0,
       "visits_night": 0,
       "position": 999,
-      "idgroup": 1
+      "idgroup": 2
     },
     "95": {
       "id": 97,
