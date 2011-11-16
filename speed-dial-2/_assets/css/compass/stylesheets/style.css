@@ -1,0 +1,40 @@
+/* line 1, ../sass/style.scss */
+#menu li {
+  font-size: 24px;
+}
+
+/*#groups { width: 100%; }*/
+/* line 7, ../sass/style.scss */
+#groups li a {
+  font-size: 24px !important;
+}
+
+/*#groups li:first-child:before { content: "∃"; font-size: 24px; color: #fff; }*/
+@import url(http://fonts.googleapis.com/css?family=Sancreek);
+/* line 15, ../sass/style.scss */
+#pages .link a .thumbnail_container {
+  position: relative;
+  z-index: 1;
+  padding: 0 !important;
+}
+/* line 19, ../sass/style.scss */
+#pages .link:hover a .title {
+  color: #333 !important;
+}
+/* line 21, ../sass/style.scss */
+#pages .link a .title {
+  position: absolute;
+  z-index: 9001;
+  font-family: 'Silkscreen', 'Sancreek', cursive;
+  font-size: 8px !important;
+  line-height: "";
+  letter-spacing: "";
+  font-variant: "";
+  text-transform: "";
+  text-shadow: "";
+  font-weight: "";
+  color: #fff !important;
+  bottom: 13px !important;
+  margin: -3px 0 0 0 !important;
+  padding: 0 !important;
+}
