@@ -6,10 +6,10 @@
     "sys.rows": "3",
     "options.padding": "12",
     "options.colors.title": "FFFFFF",
-    "options.background": "http://anfischer.com/wp-content/uploads/lichtzeichnungen/anfischer_lichtzeichnung_4.jpg",
+    "lastdeleted": "null|||undefined",
     "options.dialSpace": "95",
     "refresh_id": "",
-    "lastdeleted": "null|||undefined",
+    "options.background": "http://anfischer.com/wp-content/uploads/lichtzeichnungen/anfischer_lichtzeichnung_4.jpg",
     "options.dialstyle.titleposition": "bottom",
     "addPageFromContextMenu": null,
     "refreshThumbnail": "",
@@ -17,7 +17,7 @@
     "options.sidebar.delicious.favoriteTags": "development,jquery,css,python,django,nodejs",
     "options.colors.dialbginner": "FFFFFF",
     "options.sidebar.showBookmarks": "1",
-    "options.columns": "6",
+    "sys.containerwidth": "-870.5046728971963px",
     "options.colors.borderover": "FFFFFF",
     "options.repeatbackground": "no-repeat",
     "options.titleAlign": "right",
@@ -27,18 +27,18 @@
     "options.fontface": "'Bookman Old Style', serif;",
     "options.highlight": "0",
     "options.apps.iconsize": "extrasmall",
+    "options.thumbnailQuality": "high",
     "options.showAddButton": "1",
-    "sys.containerwidth": "-883.6363636363635px",
     "options.dialstyle.corners": "12",
     "v1573": "false",
-    "sys.dialheight": "-57.2",
-    "options.fontsize": "8",
+    "sys.dialheight": "-57.375",
+    "options.colors.dialbgover": "FFFFFF",
     "options.refreshThumbnails": "0",
     "options.apps.show": "1",
-    "options.centerThumbnailsVertically": "2",
     "options.sidebar.showApps": "1",
     "options.sidebar.showHistory": "1",
-    "options.sidebaractivation": "position",
+    "options.defaultGroupName": "♜",
+    "options.fontsize": "8",
     "options.fontstyle": "font-weight:bold;font-style:normal;",
     "options.backgroundPattern": "null",
     "options.showVisits": "0",
@@ -47,22 +47,23 @@
     "options.colors.dialbginnerover": "FFFFFF",
     "options.useDeliciousShortcut": "1",
     "options.colors.border": "FFFFFF",
-    "sys.dialwidth": "-167.27272727272725",
+    "sys.dialwidth": "-165.08411214953273",
     "firstTime": "false",
     "options.centerVertically": "0",
     "options.sidebar": "1",
-    "options.defaultGroupName": "♜",
     "options.backgroundPosition": "center top",
     "options.alwaysNewTab": "1",
     "options.appOrder": "[\"ejidjjhkpiempkbhmpbfngldlkglhimk\",\"ejjicmeblgpmajnghnpcppodonldlgfn\",\"pjjhlfkghdhmijklfnahfkpgmhcmfgcm\",\"fkkaebihfmbofclegkcfkkemepfehibg\",\"mhgffcfekbglhpcdjkhhjekhdnddkflg\"]",
     "requestThumbnail": null,
-    "options.thumbnailQuality": "high",
     "options.apps.position": "bottom",
-    "options.colors.dialbgover": "FFFFFF",
+    "options.customCss": "@charset \"UTF-8\";\n@import url(http://fonts.googleapis.com/css?family=Sancreek);\n/* line 3, ../sass/css.scss */\n.group.selected { outline: 1px orange solid; }\n::-webkit-scrollbar {\n  width: 13px;\n  height: 13px;\n}\n\n/* line 7, ../sass/css.scss */\n::-webkit-scrollbar:hover {\n  height: 18px;\n}\n\n/* line 11, ../sass/css.scss */\n::-webkit-scrollbar-button:start:decrement,\n::-webkit-scrollbar-button:end:increment {\n  height: 15px;\n  width: 13px;\n  display: block;\n  background: #101211;\n  background-repeat: no-repeat;\n}\n\n/* line 18, ../sass/css.scss */\n::-webkit-scrollbar-button:horizontal:decrement {\n  background-image: url(scrollbar/horizontal-decrement-arrow.png);\n  background-position: 4px 3px;\n}\n\n/* line 22, ../sass/css.scss */\n::-webkit-scrollbar-button:horizontal:increment {\n  background-image: url(scrollbar/horizontal-increment-arrow.png);\n  background-position: 3px 3px;\n}\n\n/* line 26, ../sass/css.scss */\n::-webkit-scrollbar-button:vertical:decrement {\n  background-image: url(scrollbar/vertical-decrement-arrow.png);\n  background-position: 3px 4px;\n  background: #e0e0e0;\n}\n\n/* line 31, ../sass/css.scss */\n::-webkit-scrollbar-button:vertical:increment {\n  background-image: url(scrollbar/vertical-increment-arrow.png);\n  background-position: 3px 4px;\n  background: #e0e0e0;\n}\n\n/* line 36, ../sass/css.scss */\n::-webkit-scrollbar-button:horizontal:decrement:active {\n  background-image: url(scrollbar/horizontal-decrement-arrow-active.png);\n}\n\n/* line 39, ../sass/css.scss */\n::-webkit-scrollbar-button:horizontal:increment:active {\n  background-image: url(scrollbar/horizontal-increment-arrow-active.png);\n}\n\n/* line 42, ../sass/css.scss */\n::-webkit-scrollbar-button:vertical:decrement:active {\n  background-image: url(scrollbar/vertical-decrement-arrow-active.png);\n}\n\n/* line 45, ../sass/css.scss */\n::-webkit-scrollbar-button:vertical:increment:active {\n  background-image: url(scrollbar/vertical-increment-arrow-active.png);\n}\n\n/* line 48, ../sass/css.scss */\n::-webkit-scrollbar-track-piece {\n  background-color: #151716;\n  background-color: #e0e0e0;\n}\n\n/* line 52, ../sass/css.scss */\n::-webkit-scrollbar-thumb:vertical {\n  height: 50px;\n  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #4d4d4d), color-stop(100%, #333333));\n  border: 1px solid #0d0d0d;\n  border-top: 1px solid #666666;\n  border-left: 1px solid #666666;\n}\n\n/* line 59, ../sass/css.scss */\n::-webkit-scrollbar-thumb:horizontal {\n  width: 50px;\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4d4d4d), color-stop(100%, #333333));\n  border: 1px solid #1f1f1f;\n  border-top: 1px solid #666666;\n  border-left: 1px solid #666666;\n}\n\n/* line 66, ../sass/css.scss */\n#menu li {\n  font-size: 24px;\n}\n\n/* line 69, ../sass/css.scss */\n#main {\n  margin-bottom: 0 !important;\n  position: static;\n  display: inline-table;\n  width: 100%;\n  height: 100%;\n}\n\n/* line 76, ../sass/css.scss */\nbody {\n  -webkit-font-smoothing: antialiased;\n  text-rendering: optimizelegibility;\n  margin: 0 !important;\n  padding: 0 !important;\n}\n\n/* line 83, ../sass/css.scss */\n.home {\n  margin-top: 1px !important;\n}\n\n/* line 86, ../sass/css.scss */\n#groups {\n  position: absolute !important;\n  padding-left: 0 !important;\n  padding-right: 0 !important;\n  width: 20% !important;\n  height: 100% !important;\n  overflow: hidden !important;\n  /*overflow-y: scroll !important; for windows people */\n  overflow-y: visible !important;\n  background: #e0e0e0;\n}\n/* line 97, ../sass/css.scss */\n#groups li {\n  position: relative;\n  z-index: 200;\n  padding-left: 0;\n  padding-right: 0;\n  padding-top: 0;\n  display: block;\n  float: none;\n  clear: left;\n  text-align: center;\n}\n/* line 98, ../sass/css.scss */\n#groups li a {\n  cursor: default;\n  font-size: 4em !important;\n  text-decoration: none;\n  font-size: 20px;\n  font-family: helvetica, sans-serif;\n  font-weight: bold;\n  display: block;\n  padding: 0;\n  color: #ccc;\n  opacity: 0.8;\n  -webkit-transition: .2s ease-in-out;\n  padding: 0;\n  width: 100%;\n  text-align: center;\n}\n/* line 113, ../sass/css.scss */\n#groups li a:hover {\n  color: #444;\n}\n\n/* line 124, ../sass/css.scss */\n#pages {\n  clear: both;\n  margin: 0 auto;\n  position: relative;\n  top: 15px;\n  text-align: center;\n  text-align: center;\n  left: auto !important;\n  height: 100% !important;\n  width: 80% !important;\n  margin-left: 20% !important;\n  background-image: url(\"file:///Users/nerdfiles/Downloads/8thkz9t.png\") !important;\n  background-repeat: repeat;\n  background-position: 50% 50%;\n  background: #fff !important;\n  top: 0 !important;\n}\n/* line 126, ../sass/css.scss */\n#pages li {\n  vertical-align: middle;\n  position: relative !important;\n  z-index: 2;\n  float: none !important;\n  top: auto !important;\n  width: 15%;\n  left: auto !important;\n  padding: 0 !important;\n  margin: 1em 0 1.5em !important;\n  display: inline-block;\n  height: 20% !important;\n}\n/* line 154, ../sass/css.scss */\n#pages .link a {\n  height: 100% !important;\n  cursor: default;\n}\n/* line 157, ../sass/css.scss */\n#pages .link a .thumbnail_container {\n  position: relative;\n  z-index: 1;\n  padding: 0 !important;\n  width: 100%;\n  height: 100%;\n  float: left;\n  display: block;\n  border-radius: 10px !important;\n  border-radius: 0px !important;\n}\n/* line 167, ../sass/css.scss */\n#pages #emptyrow {\n  left: auto !important;\n  top: -1em !important;\n  position: absolute !important;\n  right: 1em;\n  width: 48px;\n  height: 48px;\n}\n/* line 174, ../sass/css.scss */\n#pages:before {\n  content: \".\";\n  float: left;\n  display: block;\n  position: relative;\n}\n/* line 180, ../sass/css.scss */\n#pages .link a .thumbnail_container {\n  position: relative;\n  z-index: 1;\n  padding: 0 !important;\n}\n/* line 184, ../sass/css.scss */\n#pages .link:hover a .title {\n  color: #fff !important;\n}\n/* line 186, ../sass/css.scss */\n#pages .link a .title {\n  position: relative !important;\n  z-index: 9001;\n  font-family: 'Silkscreen', 'Sancreek', cursive;\n  font-size: 8px !important;\n  line-height: \"\";\n  letter-spacing: \"\";\n  font-variant: \"\";\n  text-transform: \"\";\n  text-shadow: \"\";\n  font-weight: \"\";\n  color: #fff !important;\n  bottom: 13px !important;\n  margin: -3px 0 0 0 !important;\n  padding: 0 !important;\n}\n\n/*#groups li:first-child:before { content: \"∃\"; font-size: 24px; color: #fff; }*/\n",
+    "options.centerThumbnailsVertically": "2",
     "sys.cellspacing": "24",
     "options.sidebar.showBookmarksURL": "1",
     "options.sidebar.deliciousUsername": "nerdfiles",
+    "options.sidebaractivation": "position",
     "options.sidebar.showDelicious": "1",
+    "options.columns": "6",
     "options.apps.align": "center",
     "refresh_url": "",
     "sys.cols": "6",
@@ -184,6 +185,20 @@
       "idgroup": 5
     },
     "8": {
+      "id": 33,
+      "title": "Web development blog, news and reviews - Developer Drive",
+      "url": "http://www.developerdrive.com/",
+      "thumbnail": "http://www.developerdrive.com/wp-content/themes/DD%20Responsive/images/large-logo.png",
+      "ts_created": 1320729795,
+      "visits": 0,
+      "visits_morning": 0,
+      "visits_afternoon": 0,
+      "visits_evening": 0,
+      "visits_night": 0,
+      "position": 1,
+      "idgroup": 6
+    },
+    "9": {
       "id": 9,
       "title": "gmail",
       "url": "https://mail.google.com/mail/",
@@ -197,7 +212,7 @@
       "position": 2,
       "idgroup": 0
     },
-    "9": {
+    "10": {
       "id": 10,
       "title": "Django | Django documentation | Django documentation",
       "url": "http://www.djangobook.com/",
@@ -211,7 +226,7 @@
       "position": 2,
       "idgroup": 12
     },
-    "10": {
+    "11": {
       "id": 11,
       "title": "Dev.Opera",
       "url": "http://dev.opera.com/",
@@ -225,7 +240,7 @@
       "position": 2,
       "idgroup": 18
     },
-    "11": {
+    "12": {
       "id": 12,
       "title": "Invoice Machine!",
       "url": "http://nerdfiles.invoicemachine.com/projects",
@@ -239,7 +254,7 @@
       "position": 2,
       "idgroup": 1
     },
-    "12": {
+    "13": {
       "id": 13,
       "title": "Mobile HTML5 - compatibility tables for iPhone, Android, BlackBerry, Symbian, iPad and other mobile devices",
       "url": "http://mobilehtml5.org/",
@@ -253,7 +268,7 @@
       "position": 2,
       "idgroup": 17
     },
-    "13": {
+    "14": {
       "id": 14,
       "title": "The Adventures of Dr. McNinja",
       "url": "http://drmcninja.com/",
@@ -267,7 +282,7 @@
       "position": 2,
       "idgroup": 15
     },
-    "14": {
+    "15": {
       "id": 15,
       "title": "Font Squirrel | Handpicked free fonts for graphic designers with commercial-use licenses.",
       "url": "http://www.fontsquirrel.com/",
@@ -281,7 +296,7 @@
       "position": 2,
       "idgroup": 19
     },
-    "15": {
+    "16": {
       "id": 16,
       "title": "Adbusters Culturejammer Headquarters | Journal of the mental environment",
       "url": "http://www.adbusters.org/",
@@ -295,7 +310,21 @@
       "position": 2,
       "idgroup": 5
     },
-    "16": {
+    "17": {
+      "id": 117,
+      "title": "Smashing Magazine - For Professional Web Designers and Developers",
+      "url": "http://www.smashingmagazine.com/",
+      "thumbnail": "http://www.ruandeyzel.co.za/wp-content/uploads/2011/08/smashing_slide02.jpg",
+      "ts_created": 1320729994,
+      "visits": 0,
+      "visits_morning": 0,
+      "visits_afternoon": 0,
+      "visits_evening": 0,
+      "visits_night": 0,
+      "position": 2,
+      "idgroup": 6
+    },
+    "18": {
       "id": 17,
       "title": "Google Docs",
       "url": "https://docs.google.com",
@@ -309,7 +338,7 @@
       "position": 3,
       "idgroup": 0
     },
-    "17": {
+    "19": {
       "id": 18,
       "title": "django-cms | Read the Docs",
       "url": "http://readthedocs.org/projects/django-cms/",
@@ -323,7 +352,7 @@
       "position": 3,
       "idgroup": 12
     },
-    "18": {
+    "20": {
       "id": 19,
       "title": "Kippt",
       "url": "http://kippt.com/",
@@ -337,7 +366,7 @@
       "position": 3,
       "idgroup": 1
     },
-    "19": {
+    "21": {
       "id": 20,
       "title": "Schemas - schema.org",
       "url": "http://schema.org/docs/schemas.html",
@@ -351,7 +380,7 @@
       "position": 3,
       "idgroup": 18
     },
-    "20": {
+    "22": {
       "id": 21,
       "title": "a softer world: 739",
       "url": "http://www.asofterworld.com/",
@@ -365,7 +394,7 @@
       "position": 3,
       "idgroup": 15
     },
-    "21": {
+    "23": {
       "id": 22,
       "title": "The HTML5 test - How well does your browser support HTML5?",
       "url": "http://html5test.com/",
@@ -379,7 +408,7 @@
       "position": 3,
       "idgroup": 17
     },
-    "22": {
+    "24": {
       "id": 23,
       "title": "Typekit",
       "url": "https://typekit.com/",
@@ -393,7 +422,7 @@
       "position": 3,
       "idgroup": 19
     },
-    "23": {
+    "25": {
       "id": 24,
       "title": "The New Yorker",
       "url": "http://www.newyorker.com/",
@@ -407,7 +436,21 @@
       "position": 3,
       "idgroup": 5
     },
-    "24": {
+    "26": {
+      "id": 111,
+      "title": "CSS3 . Info - All you ever needed to know about CSS3",
+      "url": "http://www.css3.info/",
+      "thumbnail": "http://www.churchofrabbit.com/wp-content/posts/css3-info.png",
+      "ts_created": 1320730317,
+      "visits": 1,
+      "visits_morning": 1,
+      "visits_afternoon": 0,
+      "visits_evening": 0,
+      "visits_night": 0,
+      "position": 3,
+      "idgroup": 6
+    },
+    "27": {
       "id": 25,
       "title": "Help.GitHub - Welcome",
       "url": "http://help.github.com/",
@@ -421,7 +464,7 @@
       "position": 4,
       "idgroup": 12
     },
-    "25": {
+    "28": {
       "id": 26,
       "title": "create a new fiddle",
       "url": "http://jsfiddle.net/",
@@ -435,7 +478,7 @@
       "position": 4,
       "idgroup": 0
     },
-    "26": {
+    "29": {
       "id": 27,
       "title": "1&1 Control Panel",
       "url": "https://my.1and1.com/xml/config/Dashboard;jsessionid=692773C5B667CA1BFCD462802227E64C.TCpfix13a?__reuse=1321379331076&__lf=HomeFlow",
@@ -449,7 +492,7 @@
       "position": 4,
       "idgroup": 1
     },
-    "27": {
+    "30": {
       "id": 28,
       "title": "schema.rdfs.org - Home",
       "url": "http://schema.rdfs.org/",
@@ -463,7 +506,7 @@
       "position": 4,
       "idgroup": 18
     },
-    "28": {
+    "31": {
       "id": 29,
       "title": "xkcd: Map Projections",
       "url": "http://www.xkcd.com/",
@@ -477,7 +520,7 @@
       "position": 4,
       "idgroup": 15
     },
-    "29": {
+    "32": {
       "id": 30,
       "title": "HTML5 Rocks - A resource for open web HTML5 developers",
       "url": "http://www.html5rocks.com/en/",
@@ -491,7 +534,7 @@
       "position": 4,
       "idgroup": 17
     },
-    "30": {
+    "33": {
       "id": 31,
       "title": "Fonts.com",
       "url": "http://www.fonts.com/",
@@ -505,7 +548,7 @@
       "position": 4,
       "idgroup": 19
     },
-    "31": {
+    "34": {
       "id": 32,
       "title": "The Economist - World News, Politics, Economics, Business & Finance",
       "url": "http://www.economist.com/",
@@ -519,21 +562,21 @@
       "position": 4,
       "idgroup": 5
     },
-    "32": {
-      "id": 33,
-      "title": "Web development blog, news and reviews - Developer Drive",
-      "url": "http://www.developerdrive.com/",
-      "thumbnail": "http://www.developerdrive.com/wp-content/themes/DD%20Responsive/images/large-logo.png",
-      "ts_created": 1320729795,
-      "visits": 0,
+    "35": {
+      "id": 120,
+      "title": "Web development tutorials, from beginner to advanced | Nettuts+",
+      "url": "http://net.tutsplus.com/",
+      "thumbnail": "http://goodlearning.com/wp/wp-content/uploads/2010/09/nettuts-logo-150x150.png",
+      "ts_created": 1320730449,
+      "visits": 1,
       "visits_morning": 0,
-      "visits_afternoon": 0,
+      "visits_afternoon": 1,
       "visits_evening": 0,
       "visits_night": 0,
-      "position": 5,
+      "position": 4,
       "idgroup": 6
     },
-    "33": {
+    "36": {
       "id": 34,
       "title": "wittysense’s Music Profile – Users at Last.fm",
       "url": "http://www.last.fm/user/wittysense",
@@ -547,7 +590,7 @@
       "position": 5,
       "idgroup": 13
     },
-    "34": {
+    "37": {
       "id": 35,
       "title": "PHP: Documentation",
       "url": "http://www.php.net/docs.php",
@@ -561,7 +604,7 @@
       "position": 5,
       "idgroup": 12
     },
-    "35": {
+    "38": {
       "id": 36,
       "title": "dashboard",
       "url": "http://c9.io/nerdfiles",
@@ -575,7 +618,7 @@
       "position": 5,
       "idgroup": 0
     },
-    "36": {
+    "39": {
       "id": 37,
       "title": "Dashboard",
       "url": "http://soundcloud.com/dashboard",
@@ -589,7 +632,7 @@
       "position": 5,
       "idgroup": 1
     },
-    "37": {
+    "40": {
       "id": 38,
       "title": "Data-Vocabulary.org | Official Website",
       "url": "http://www.data-vocabulary.org/",
@@ -603,7 +646,7 @@
       "position": 5,
       "idgroup": 18
     },
-    "38": {
+    "41": {
       "id": 39,
       "title": "Dinosaur Comics - November 15th, 2011 - awesome fun times!",
       "url": "http://www.qwantz.com/index.php",
@@ -617,7 +660,7 @@
       "position": 5,
       "idgroup": 15
     },
-    "39": {
+    "42": {
       "id": 40,
       "title": "FFFFALLBACK - A simple tool for bulletproof web typography.",
       "url": "http://ffffallback.com/",
@@ -631,7 +674,7 @@
       "position": 5,
       "idgroup": 19
     },
-    "40": {
+    "43": {
       "id": 41,
       "title": "When can I use... Support tables for HTML5, CSS3, etc",
       "url": "http://caniuse.com/",
@@ -645,7 +688,7 @@
       "position": 5,
       "idgroup": 17
     },
-    "41": {
+    "44": {
       "id": 42,
       "title": "Homepage - Slate Magazine",
       "url": "http://www.slate.com/",
@@ -659,21 +702,35 @@
       "position": 5,
       "idgroup": 5
     },
-    "42": {
+    "45": {
+      "id": 121,
+      "title": "dzone.com - fresh links for developers",
+      "url": "http://www.dzone.com/links/index.html",
+      "thumbnail": "http://www.dzone.com/links/themes/reader/images/dzlogo-tagline-small.gif",
+      "ts_created": 1320730483,
+      "visits": 0,
+      "visits_morning": 0,
+      "visits_afternoon": 0,
+      "visits_evening": 0,
+      "visits_night": 0,
+      "position": 5,
+      "idgroup": 6
+    },
+    "46": {
       "id": 43,
       "title": "dashboard",
       "url": "https://github.com/",
       "thumbnail": "http://octodex.github.com/images/nyantocat.gif",
       "ts_created": 1320731884,
-      "visits": 10,
-      "visits_morning": 5,
+      "visits": 11,
+      "visits_morning": 6,
       "visits_afternoon": 0,
       "visits_evening": 1,
       "visits_night": 4,
       "position": 6,
       "idgroup": 0
     },
-    "43": {
+    "47": {
       "id": 44,
       "title": "Main Page « WordPress Codex",
       "url": "http://codex.wordpress.org/",
@@ -687,7 +744,7 @@
       "position": 6,
       "idgroup": 12
     },
-    "44": {
+    "48": {
       "id": 45,
       "title": "Dashboard",
       "url": "http://www.flickr.com/",
@@ -701,7 +758,7 @@
       "position": 6,
       "idgroup": 1
     },
-    "45": {
+    "49": {
       "id": 46,
       "title": "semanticweb.org",
       "url": "http://semanticweb.org/wiki/Main_Page",
@@ -715,7 +772,7 @@
       "position": 6,
       "idgroup": 18
     },
-    "46": {
+    "50": {
       "id": 47,
       "title": "HTML5 Boilerplate - A rock-solid default template for HTML5 awesome.",
       "url": "http://html5boilerplate.com/",
@@ -729,7 +786,7 @@
       "position": 6,
       "idgroup": 17
     },
-    "47": {
+    "51": {
       "id": 48,
       "title": "Font Matrix",
       "url": "http://media.24ways.org/2007/17/fontmatrix.html",
@@ -743,7 +800,7 @@
       "position": 6,
       "idgroup": 19
     },
-    "48": {
+    "52": {
       "id": 49,
       "title": "http://jessfink.com/Chester5000X",
       "url": "http://jessfink.com/Chester5000XYV/",
@@ -757,7 +814,7 @@
       "position": 6,
       "idgroup": 15
     },
-    "49": {
+    "53": {
       "id": 50,
       "title": "The New York Times - Breaking News, World News & Multimedia",
       "url": "http://www.nytimes.com/",
@@ -771,7 +828,21 @@
       "position": 6,
       "idgroup": 5
     },
-    "50": {
+    "54": {
+      "id": 134,
+      "title": "SitePoint » Web Design, Web Development, Freelancing, Tech News and more",
+      "url": "http://www.sitepoint.com/",
+      "thumbnail": "http://www.sitepoint.com/wp-content/themes/thesis/custom/images/logo.png",
+      "ts_created": 1320768127,
+      "visits": 1,
+      "visits_morning": 1,
+      "visits_afternoon": 0,
+      "visits_evening": 0,
+      "visits_night": 0,
+      "position": 6,
+      "idgroup": 6
+    },
+    "55": {
       "id": 51,
       "title": "Erlang/OTP R14B04",
       "url": "http://www.erlang.org/doc/",
@@ -785,7 +856,7 @@
       "position": 7,
       "idgroup": 12
     },
-    "51": {
+    "56": {
       "id": 52,
       "title": "Twats you follow",
       "url": "https://twitter.com/#!/filesofnerds/following/tweets",
@@ -799,7 +870,7 @@
       "position": 7,
       "idgroup": 0
     },
-    "52": {
+    "57": {
       "id": 53,
       "title": "copypastecharacter",
       "url": "http://copypastecharacter.com/",
@@ -813,7 +884,7 @@
       "position": 7,
       "idgroup": 1
     },
-    "53": {
+    "58": {
       "id": 54,
       "title": "owl-features",
       "url": "http://www.w3.org/TR/owl-features/",
@@ -827,7 +898,7 @@
       "position": 7,
       "idgroup": 18
     },
-    "54": {
+    "59": {
       "id": 55,
       "title": "The Perry Bible Fellowship",
       "url": "http://www.pbfcomics.com/",
@@ -841,7 +912,7 @@
       "position": 7,
       "idgroup": 15
     },
-    "55": {
+    "60": {
       "id": 56,
       "title": "Chrome Experiments - Home",
       "url": "http://www.chromeexperiments.com/",
@@ -855,7 +926,7 @@
       "position": 7,
       "idgroup": 17
     },
-    "56": {
+    "61": {
       "id": 57,
       "title": "Common fonts to all versions of Windows & Mac equivalents (Browser safe fonts) - Web design tips & tricks",
       "url": "http://www.ampsoft.net/webdesign-l/WindowsMacFonts.html",
@@ -869,7 +940,21 @@
       "position": 7,
       "idgroup": 19
     },
-    "57": {
+    "62": {
+      "id": 135,
+      "title": "Free and Useful Online Resources for Designers and Developers",
+      "url": "http://www.smashingapps.com/",
+      "thumbnail": "http://www.logodesignworks.com/blog/images/smashing-apps-logo.jpg",
+      "ts_created": 1320768269,
+      "visits": 0,
+      "visits_morning": 0,
+      "visits_afternoon": 0,
+      "visits_evening": 0,
+      "visits_night": 0,
+      "position": 7,
+      "idgroup": 6
+    },
+    "63": {
       "id": 58,
       "title": "RSS 2.0 Specification (RSS 2.0 at Harvard Law)",
       "url": "http://cyber.law.harvard.edu/rss/rss.html",
@@ -883,7 +968,7 @@
       "position": 8,
       "idgroup": 18
     },
-    "58": {
+    "64": {
       "id": 59,
       "title": "Learn You Some Erlang for Great Good!",
       "url": "http://learnyousomeerlang.com/",
@@ -897,7 +982,7 @@
       "position": 8,
       "idgroup": 12
     },
-    "59": {
+    "65": {
       "id": 60,
       "title": "updates",
       "url": "http://www.linkedin.com/home",
@@ -911,7 +996,7 @@
       "position": 8,
       "idgroup": 0
     },
-    "60": {
+    "66": {
       "id": 61,
       "title": "Code Snippets on the Webz",
       "url": "http://snipplr.com/users/nerdfiles/",
@@ -925,7 +1010,7 @@
       "position": 8,
       "idgroup": 1
     },
-    "61": {
+    "67": {
       "id": 62,
       "title": "HTML5 - MDN",
       "url": "https://developer.mozilla.org/en/HTML/HTML5",
@@ -939,7 +1024,7 @@
       "position": 8,
       "idgroup": 17
     },
-    "62": {
+    "68": {
       "id": 63,
       "title": "dark crystal palace (# 1517) - Bunny",
       "url": "http://www.bunny-comic.com/",
@@ -953,7 +1038,7 @@
       "position": 8,
       "idgroup": 15
     },
-    "63": {
+    "69": {
       "id": 64,
       "title": "Gridlover",
       "url": "http://www.gridlover.net/",
@@ -967,7 +1052,21 @@
       "position": 8,
       "idgroup": 19
     },
-    "64": {
+    "70": {
+      "id": 159,
+      "title": "Web Developer's Handbook | CSS, Web Development, Color Tools, SEO, Usability etc.",
+      "url": "http://www.alvit.de/handbook/",
+      "thumbnail": "http://www.churchofrabbit.com/wp-content/posts/web-developers-handbook.png",
+      "ts_created": 1321379856,
+      "visits": 1,
+      "visits_morning": 1,
+      "visits_afternoon": 0,
+      "visits_evening": 0,
+      "visits_night": 0,
+      "position": 8,
+      "idgroup": 6
+    },
+    "71": {
       "id": 65,
       "title": "Welcome to the microformats wiki! · Microformats Wiki",
       "url": "http://microformats.org/wiki/Main_Page#Specifications",
@@ -981,7 +1080,7 @@
       "position": 9,
       "idgroup": 18
     },
-    "65": {
+    "72": {
       "id": 66,
       "title": "Documentation — Zotonic",
       "url": "http://zotonic.com/documentation",
@@ -995,7 +1094,7 @@
       "position": 9,
       "idgroup": 12
     },
-    "66": {
+    "73": {
       "id": 67,
       "title": "Posts from everyone",
       "url": "https://forrst.com/posts/from/everyone",
@@ -1009,7 +1108,7 @@
       "position": 9,
       "idgroup": 0
     },
-    "67": {
+    "74": {
       "id": 68,
       "title": "Vinyl Collection",
       "url": "http://www.discogs.com/user/nerdfiles",
@@ -1023,7 +1122,7 @@
       "position": 9,
       "idgroup": 1
     },
-    "68": {
+    "75": {
       "id": 69,
       "title": "diesel sweeties : robot webcomic and geeky music t-shirts",
       "url": "http://www.dieselsweeties.com/",
@@ -1037,7 +1136,7 @@
       "position": 9,
       "idgroup": 15
     },
-    "69": {
+    "76": {
       "id": 70,
       "title": "Typograph – Scale & Rhythm",
       "url": "http://lamb.cc/typograph/",
@@ -1051,7 +1150,7 @@
       "position": 9,
       "idgroup": 19
     },
-    "70": {
+    "77": {
       "id": 71,
       "title": "Maqetta Designer",
       "url": "http://maqetta.org:55556/maqetta/cmd/tryIt",
@@ -1065,7 +1164,21 @@
       "position": 9,
       "idgroup": 17
     },
-    "71": {
+    "78": {
+      "id": 165,
+      "title": "Graphic Design Inspiration of Digital Photography and Photoshop Tutorials @Smashing Hub",
+      "url": "http://smashinghub.com/",
+      "thumbnail": "http://i.imgur.com/vksgI.png",
+      "ts_created": 1321384762,
+      "visits": 0,
+      "visits_morning": 0,
+      "visits_afternoon": 0,
+      "visits_evening": 0,
+      "visits_night": 0,
+      "position": 9,
+      "idgroup": 6
+    },
+    "79": {
       "id": 72,
       "title": "Programming Ruby: The Pragmatic Programmer's Guide",
       "url": "http://www.ruby-doc.org/",
@@ -1079,7 +1192,7 @@
       "position": 10,
       "idgroup": 12
     },
-    "72": {
+    "80": {
       "id": 73,
       "title": "site:mediafire.com ${whatever}",
       "url": "http://www.google.com/webhp?rlz=1C1CHFX_enUS453US453&sourceid=chrome-instant&ie=UTF-8&ion=1&nord=1#sclient=psy-ab&hl=en&rlz=1C1CHFX_enUS453US453&nord=1&site=webhp&source=hp&q=site:mediafire.com&pbx=1&oq=site:mediafire.com&aq=f&aqi=&aql=&gs_sm=s&gs_upl=18494l20039l1l24366l21l5l11l0l0l0l143l353l1.2l8l0&bav=on.2,or.r_gc.r_pw.r_cp.,cf.osb&fp=6f596cb7a063b305&ion=1&biw=1422&bih=625",
@@ -1093,7 +1206,7 @@
       "position": 10,
       "idgroup": 0
     },
-    "73": {
+    "81": {
       "id": 74,
       "title": "http://www.w3.org/TR/microdata/",
       "url": "http://www.w3.org/TR/microdata/",
@@ -1107,7 +1220,7 @@
       "position": 10,
       "idgroup": 18
     },
-    "74": {
+    "82": {
       "id": 75,
       "title": "Apple - HTML5",
       "url": "http://www.apple.com/html5/",
@@ -1121,7 +1234,7 @@
       "position": 10,
       "idgroup": 17
     },
-    "75": {
+    "83": {
       "id": 76,
       "title": "FontStruct | Build, Share, Download Fonts",
       "url": "http://fontstruct.com/",
@@ -1135,7 +1248,7 @@
       "position": 10,
       "idgroup": 19
     },
-    "76": {
+    "84": {
       "id": 77,
       "title": "Toothpaste For Dinner - 2,600+ comics by Drew - Updates daily at midnight",
       "url": "http://www.toothpastefordinner.com/",
@@ -1149,7 +1262,21 @@
       "position": 10,
       "idgroup": 15
     },
-    "77": {
+    "85": {
+      "id": 167,
+      "title": "Best Open Source Resources for Web Developers | WebAppers",
+      "url": "http://www.webappers.com/",
+      "thumbnail": "http://www.churchofrabbit.com/wp-content/posts/webappers.png",
+      "ts_created": 1321389308,
+      "visits": 0,
+      "visits_morning": 0,
+      "visits_afternoon": 0,
+      "visits_evening": 0,
+      "visits_night": 0,
+      "position": 10,
+      "idgroup": 6
+    },
+    "86": {
       "id": 78,
       "title": "RDF Primer",
       "url": "http://www.w3.org/TR/rdf-primer/",
@@ -1163,7 +1290,7 @@
       "position": 11,
       "idgroup": 18
     },
-    "78": {
+    "87": {
       "id": 79,
       "title": "Welcome to CodeIgniter : CodeIgniter User Guide",
       "url": "http://codeigniter.com/user_guide/",
@@ -1177,7 +1304,7 @@
       "position": 11,
       "idgroup": 12
     },
-    "79": {
+    "88": {
       "id": 80,
       "title": "Hacker News",
       "url": "http://news.ycombinator.com/",
@@ -1191,7 +1318,7 @@
       "position": 11,
       "idgroup": 0
     },
-    "80": {
+    "89": {
       "id": 81,
       "title": "harmony",
       "url": "http://mrdoob.com/projects/harmony/",
@@ -1205,7 +1332,7 @@
       "position": 11,
       "idgroup": 1
     },
-    "81": {
+    "90": {
       "id": 82,
       "title": "Fluid Squares v2. A responsive grid experiment.",
       "url": "http://fluidsquares.com/",
@@ -1219,7 +1346,7 @@
       "position": 11,
       "idgroup": 17
     },
-    "82": {
+    "91": {
       "id": 83,
       "title": "FontEditor BitfontMaker",
       "url": "http://www.pentacom.jp/soft/ex/font/edit_canvas.html",
@@ -1233,7 +1360,7 @@
       "position": 11,
       "idgroup": 19
     },
-    "83": {
+    "92": {
       "id": 84,
       "title": "Natalie Dee: \"America's Favorite Cracker\"",
       "url": "http://www.nataliedee.com/",
@@ -1247,7 +1374,21 @@
       "position": 11,
       "idgroup": 15
     },
-    "84": {
+    "93": {
+      "id": 168,
+      "title": "Ars Technica",
+      "url": "http://arstechnica.com/",
+      "thumbnail": "http://go.eset.com/us/images/press_images/ars_technica_logo_200.jpg",
+      "ts_created": 1321389545,
+      "visits": 1,
+      "visits_morning": 0,
+      "visits_afternoon": 1,
+      "visits_evening": 0,
+      "visits_night": 0,
+      "position": 11,
+      "idgroup": 6
+    },
+    "94": {
       "id": 85,
       "title": "Hybrid Core: WordPress theme development framework",
       "url": "http://themehybrid.com/hybrid-core",
@@ -1261,7 +1402,7 @@
       "position": 12,
       "idgroup": 12
     },
-    "85": {
+    "95": {
       "id": 86,
       "title": "2600: The Hacker Quarterly",
       "url": "http://www.2600.com/",
@@ -1275,7 +1416,7 @@
       "position": 12,
       "idgroup": 0
     },
-    "86": {
+    "96": {
       "id": 87,
       "title": "http://pipes.yahoo.com/pipes/pip",
       "url": "http://pipes.yahoo.com/pipes/",
@@ -1289,7 +1430,7 @@
       "position": 12,
       "idgroup": 18
     },
-    "87": {
+    "97": {
       "id": 88,
       "title": "wordmark.it",
       "url": "http://wordmark.it/",
@@ -1303,7 +1444,7 @@
       "position": 12,
       "idgroup": 19
     },
-    "88": {
+    "98": {
       "id": 89,
       "title": "Superpoop comics by Drew from Toothpaste For Dinner - ARCHIVE: Jan 2009",
       "url": "http://www.superpoop.com/",
@@ -1317,7 +1458,7 @@
       "position": 12,
       "idgroup": 15
     },
-    "89": {
+    "99": {
       "id": 90,
       "title": "W3C HTML5 Logo",
       "url": "http://www.w3.org/html/logo/",
@@ -1331,7 +1472,21 @@
       "position": 12,
       "idgroup": 17
     },
-    "90": {
+    "100": {
+      "id": 170,
+      "title": "CSS-Tricks",
+      "url": "http://css-tricks.com/",
+      "thumbnail": "http://cdn.css-tricks.com/wp-content/themes/CSS-Tricks-9/images/CSS-Tricks-logo.png",
+      "ts_created": 1321389976,
+      "visits": 0,
+      "visits_morning": 0,
+      "visits_afternoon": 0,
+      "visits_evening": 0,
+      "visits_night": 0,
+      "position": 12,
+      "idgroup": 6
+    },
+    "101": {
       "id": 91,
       "title": "Yahoo! Developer Network",
       "url": "http://developer.yahoo.com/",
@@ -1345,7 +1500,7 @@
       "position": 13,
       "idgroup": 18
     },
-    "91": {
+    "102": {
       "id": 92,
       "title": "Aaron Alexander's Reading List",
       "url": "https://www.readability.com/nerdfiles/",
@@ -1359,7 +1514,7 @@
       "position": 13,
       "idgroup": 0
     },
-    "92": {
+    "103": {
       "id": 93,
       "title": "font dragr | Drag and drop font testing",
       "url": "http://fontdragr.com/",
@@ -1373,7 +1528,7 @@
       "position": 13,
       "idgroup": 19
     },
-    "93": {
+    "104": {
       "id": 94,
       "title": "Married To The Sea - 2,000+ comics by Drew & Natalie Dee - Updates daily at midnight",
       "url": "http://www.marriedtothesea.com/",
@@ -1387,7 +1542,7 @@
       "position": 13,
       "idgroup": 15
     },
-    "94": {
+    "105": {
       "id": 95,
       "title": "Documentation | drupal.org",
       "url": "http://drupal.org/documentation",
@@ -1401,7 +1556,21 @@
       "position": 13,
       "idgroup": 12
     },
-    "95": {
+    "106": {
+      "id": 171,
+      "title": "QuirksMode - for all your browser quirks",
+      "url": "http://www.quirksmode.org/",
+      "thumbnail": "http://makeawesomeweb.com/wp-content/uploads/2011/06/QuirksMode.png",
+      "ts_created": 1321390061,
+      "visits": 0,
+      "visits_morning": 0,
+      "visits_afternoon": 0,
+      "visits_evening": 0,
+      "visits_night": 0,
+      "position": 13,
+      "idgroup": 6
+    },
+    "107": {
       "id": 96,
       "title": "eBay | X.commerce",
       "url": "https://www.x.com/developers/ebay",
@@ -1415,7 +1584,7 @@
       "position": 14,
       "idgroup": 18
     },
-    "96": {
+    "108": {
       "id": 97,
       "title": "bookshelf",
       "url": "http://www.goodreads.com/user/show/153690-aaron",
@@ -1429,7 +1598,7 @@
       "position": 14,
       "idgroup": 0
     },
-    "97": {
+    "109": {
       "id": 98,
       "title": "Compass Core Framework | Compass Documentation",
       "url": "http://compass-style.org/reference/compass/",
@@ -1443,7 +1612,7 @@
       "position": 14,
       "idgroup": 12
     },
-    "98": {
+    "110": {
       "id": 99,
       "title": "The Monkeys You Ordered",
       "url": "http://www.themonkeysyouordered.com/",
@@ -1457,7 +1626,7 @@
       "position": 14,
       "idgroup": 15
     },
-    "99": {
+    "111": {
       "id": 100,
       "title": "periodic_table_of_typefaces.jpg (3150×2100)",
       "url": "http://dailydesignidea.files.wordpress.com/2010/09/periodic_table_of_typefaces.jpg",
@@ -1471,7 +1640,21 @@
       "position": 14,
       "idgroup": 19
     },
-    "100": {
+    "112": {
+      "id": 173,
+      "title": "24 ways - web design and development articles and tutorials for advent",
+      "url": "http://24ways.org/",
+      "thumbnail": "http://demosthenes.info/assets/images/icons/24ways.png",
+      "ts_created": 1321392977,
+      "visits": 1,
+      "visits_morning": 0,
+      "visits_afternoon": 1,
+      "visits_evening": 0,
+      "visits_night": 0,
+      "position": 14,
+      "idgroup": 6
+    },
+    "113": {
       "id": 101,
       "title": "API Directory - Google Data Protocol - Google Code",
       "url": "http://code.google.com/apis/gdata/docs/directory.html",
@@ -1485,7 +1668,7 @@
       "position": 15,
       "idgroup": 18
     },
-    "101": {
+    "114": {
       "id": 102,
       "title": "imi-imi - social bookmarking",
       "url": "http://imi-imi.appspot.com/",
@@ -1499,7 +1682,7 @@
       "position": 15,
       "idgroup": 0
     },
-    "102": {
+    "115": {
       "id": 103,
       "title": "File: SASS_REFERENCE",
       "url": "http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html",
@@ -1513,7 +1696,7 @@
       "position": 15,
       "idgroup": 12
     },
-    "103": {
+    "116": {
       "id": 104,
       "title": "HTML-Ipsum",
       "url": "http://html-ipsum.com/",
@@ -1527,7 +1710,7 @@
       "position": 15,
       "idgroup": 19
     },
-    "104": {
+    "117": {
       "id": 105,
       "title": "Developer's Guide - Google App Engine - Google Code",
       "url": "http://code.google.com/more/",
@@ -1541,7 +1724,7 @@
       "position": 16,
       "idgroup": 18
     },
-    "105": {
+    "118": {
       "id": 106,
       "title": "Search the Noun Project",
       "url": "http://thenounproject.com/",
@@ -1555,7 +1738,7 @@
       "position": 16,
       "idgroup": 0
     },
-    "106": {
+    "119": {
       "id": 107,
       "title": "jQuery API",
       "url": "http://api.jquery.com/",
@@ -1569,7 +1752,7 @@
       "position": 16,
       "idgroup": 12
     },
-    "107": {
+    "120": {
       "id": 108,
       "title": "World Wide Web Consortium",
       "url": "http://www.w3.org/",
@@ -1583,7 +1766,7 @@
       "position": 17,
       "idgroup": 0
     },
-    "108": {
+    "121": {
       "id": 109,
       "title": "The Living Standard",
       "url": "http://www.whatwg.org/specs/web-apps/current-work/multipage/",
@@ -1597,7 +1780,7 @@
       "position": 18,
       "idgroup": 0
     },
-    "109": {
+    "122": {
       "id": 110,
       "title": "Every Rage Face! AllTheRageFaces.com - Troll Face, Forever Alone, Y U No, and more!",
       "url": "http://alltheragefaces.com/",
@@ -1611,21 +1794,7 @@
       "position": 999,
       "idgroup": 15
     },
-    "110": {
-      "id": 111,
-      "title": "CSS3 . Info - All you ever needed to know about CSS3",
-      "url": "http://www.css3.info/",
-      "thumbnail": "http://www.churchofrabbit.com/wp-content/posts/css3-info.png",
-      "ts_created": 1320730317,
-      "visits": 1,
-      "visits_morning": 1,
-      "visits_afternoon": 0,
-      "visits_evening": 0,
-      "visits_night": 0,
-      "position": 999,
-      "idgroup": 6
-    },
-    "111": {
+    "123": {
       "id": 112,
       "title": "A List Apart",
       "url": "http://www.alistapart.com/",
@@ -1639,7 +1808,7 @@
       "position": 999,
       "idgroup": 2
     },
-    "112": {
+    "124": {
       "id": 113,
       "title": "Watch TV & Movies via Xbox, PS3, Roku & more | Hulu Plus",
       "url": "http://www.hulu.com/",
@@ -1653,7 +1822,7 @@
       "position": 999,
       "idgroup": 4
     },
-    "113": {
+    "125": {
       "id": 114,
       "title": "Table of Contents",
       "url": "http://plato.stanford.edu/contents.html",
@@ -1667,7 +1836,7 @@
       "position": 999,
       "idgroup": 3
     },
-    "114": {
+    "126": {
       "id": 115,
       "title": "netflix",
       "url": "http://netflix.com/",
@@ -1681,7 +1850,7 @@
       "position": 999,
       "idgroup": 4
     },
-    "115": {
+    "127": {
       "id": 116,
       "title": "nerdfiles's YouTube - YouTube",
       "url": "http://www.youtube.com/",
@@ -1695,21 +1864,7 @@
       "position": 999,
       "idgroup": 4
     },
-    "116": {
-      "id": 117,
-      "title": "Smashing Magazine - For Professional Web Designers and Developers",
-      "url": "http://www.smashingmagazine.com/",
-      "thumbnail": "http://www.ruandeyzel.co.za/wp-content/uploads/2011/08/smashing_slide02.jpg",
-      "ts_created": 1320729994,
-      "visits": 0,
-      "visits_morning": 0,
-      "visits_afternoon": 0,
-      "visits_evening": 0,
-      "visits_night": 0,
-      "position": 999,
-      "idgroup": 6
-    },
-    "117": {
+    "128": {
       "id": 118,
       "title": "popurls® | the genuine news aggregator for the latest web buzz",
       "url": "http://popurls.com/",
@@ -1723,7 +1878,7 @@
       "position": 999,
       "idgroup": 7
     },
-    "118": {
+    "129": {
       "id": 119,
       "title": "Thinking for a Living",
       "url": "http://www.thinkingforaliving.org/",
@@ -1737,35 +1892,7 @@
       "position": 999,
       "idgroup": 2
     },
-    "119": {
-      "id": 120,
-      "title": "Web development tutorials, from beginner to advanced | Nettuts+",
-      "url": "http://net.tutsplus.com/",
-      "thumbnail": "http://goodlearning.com/wp/wp-content/uploads/2010/09/nettuts-logo-150x150.png",
-      "ts_created": 1320730449,
-      "visits": 1,
-      "visits_morning": 0,
-      "visits_afternoon": 1,
-      "visits_evening": 0,
-      "visits_night": 0,
-      "position": 999,
-      "idgroup": 6
-    },
-    "120": {
-      "id": 121,
-      "title": "dzone.com - fresh links for developers",
-      "url": "http://www.dzone.com/links/index.html",
-      "thumbnail": "http://www.dzone.com/links/themes/reader/images/dzlogo-tagline-small.gif",
-      "ts_created": 1320730483,
-      "visits": 0,
-      "visits_morning": 0,
-      "visits_afternoon": 0,
-      "visits_evening": 0,
-      "visits_night": 0,
-      "position": 999,
-      "idgroup": 6
-    },
-    "121": {
+    "130": {
       "id": 122,
       "title": "Metacritic - Movie Reviews, TV Reviews, Game Reviews, and Music Reviews",
       "url": "http://www.metacritic.com/",
@@ -1779,7 +1906,7 @@
       "position": 999,
       "idgroup": 4
     },
-    "122": {
+    "131": {
       "id": 123,
       "title": "FFFFOUND!",
       "url": "http://ffffound.com/",
@@ -1793,7 +1920,7 @@
       "position": 999,
       "idgroup": 9
     },
-    "123": {
+    "132": {
       "id": 124,
       "title": "Fab.com",
       "url": "http://fab.com/sale/",
@@ -1807,7 +1934,7 @@
       "position": 999,
       "idgroup": 10
     },
-    "124": {
+    "133": {
       "id": 125,
       "title": "Gilt Groupe",
       "url": "http://www.gilt.com/",
@@ -1821,7 +1948,7 @@
       "position": 999,
       "idgroup": 10
     },
-    "125": {
+    "134": {
       "id": 126,
       "title": "Google Product Search",
       "url": "http://www.google.com/prdhp",
@@ -1835,7 +1962,7 @@
       "position": 999,
       "idgroup": 11
     },
-    "126": {
+    "135": {
       "id": 127,
       "title": "Shop men’s clothes, jeans, shoes, t-shirts, shirts and more at ASOS",
       "url": "http://us.asos.com/",
@@ -1849,7 +1976,7 @@
       "position": 999,
       "idgroup": 10
     },
-    "127": {
+    "136": {
       "id": 128,
       "title": "eBay | Electronics, Cars, Clothing, Collectibles and More Online Shopping",
       "url": "http://www.ebay.com/",
@@ -1863,7 +1990,7 @@
       "position": 999,
       "idgroup": 11
     },
-    "128": {
+    "137": {
       "id": 129,
       "title": "Etsy - Your place to buy and sell all things handmade, vintage, and supplies",
       "url": "http://www.etsy.com/",
@@ -1877,7 +2004,7 @@
       "position": 999,
       "idgroup": 10
     },
-    "129": {
+    "138": {
       "id": 130,
       "title": "Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more",
       "url": "http://www.amazon.com/",
@@ -1891,7 +2018,7 @@
       "position": 999,
       "idgroup": 11
     },
-    "130": {
+    "139": {
       "id": 131,
       "title": "PriceGrabber.com - Smart Shopping Anytime, Anywhere",
       "url": "http://www.pricegrabber.com/",
@@ -1905,7 +2032,7 @@
       "position": 999,
       "idgroup": 11
     },
-    "131": {
+    "140": {
       "id": 132,
       "title": "Inspiring images and videos recently added to we heart it / visual bookmark",
       "url": "http://weheartit.com/",
@@ -1919,7 +2046,7 @@
       "position": 999,
       "idgroup": 9
     },
-    "132": {
+    "141": {
       "id": 133,
       "title": "Sordo Music Database - Home",
       "url": "http://www.sordomusic.com/db/",
@@ -1933,35 +2060,7 @@
       "position": 999,
       "idgroup": 13
     },
-    "133": {
-      "id": 134,
-      "title": "SitePoint » Web Design, Web Development, Freelancing, Tech News and more",
-      "url": "http://www.sitepoint.com/",
-      "thumbnail": "http://www.sitepoint.com/wp-content/themes/thesis/custom/images/logo.png",
-      "ts_created": 1320768127,
-      "visits": 1,
-      "visits_morning": 1,
-      "visits_afternoon": 0,
-      "visits_evening": 0,
-      "visits_night": 0,
-      "position": 999,
-      "idgroup": 6
-    },
-    "134": {
-      "id": 135,
-      "title": "Free and Useful Online Resources for Designers and Developers",
-      "url": "http://www.smashingapps.com/",
-      "thumbnail": "http://www.logodesignworks.com/blog/images/smashing-apps-logo.jpg",
-      "ts_created": 1320768269,
-      "visits": 0,
-      "visits_morning": 0,
-      "visits_afternoon": 0,
-      "visits_evening": 0,
-      "visits_night": 0,
-      "position": 999,
-      "idgroup": 6
-    },
-    "135": {
+    "142": {
       "id": 136,
       "title": "W3C cheatsheet",
       "url": "http://www.w3.org/2009/cheatsheet/",
@@ -1975,21 +2074,21 @@
       "position": 999,
       "idgroup": 14
     },
-    "136": {
+    "143": {
       "id": 137,
       "title": "creativetechs.com/tips/tip_resources/PocketMod/MacOSX-Shortcuts-PocketMod.pdf",
       "url": "http://www.usingmac.com/2007/11/21/mac-os-x-leopard-200-productivity-booster-hotkeys",
       "thumbnail": "http://images.wikia.com/ipod/images/3/3a/Apple_logo_Think_Different.png",
       "ts_created": 1320772920,
-      "visits": 2,
-      "visits_morning": 0,
+      "visits": 3,
+      "visits_morning": 1,
       "visits_afternoon": 1,
       "visits_evening": 0,
       "visits_night": 1,
       "position": 999,
       "idgroup": 14
     },
-    "137": {
+    "144": {
       "id": 138,
       "title": "Lifehacker, tips and downloads for getting things done",
       "url": "http://lifehacker.com/",
@@ -2003,7 +2102,7 @@
       "position": 999,
       "idgroup": 7
     },
-    "138": {
+    "145": {
       "id": 139,
       "title": "Gizmodo, the Gadget Guide",
       "url": "http://gizmodo.com/",
@@ -2017,7 +2116,7 @@
       "position": 999,
       "idgroup": 7
     },
-    "139": {
+    "146": {
       "id": 140,
       "title": "Social Media News and Web Tips – Mashable – The Social Media Guide",
       "url": "http://mashable.com/",
@@ -2031,7 +2130,7 @@
       "position": 999,
       "idgroup": 7
     },
-    "140": {
+    "147": {
       "id": 141,
       "title": "BBC/OU Open2.net - Ethics Bites Podcast",
       "url": "http://www.neuroethics.ox.ac.uk/bio-ethics_bites",
@@ -2045,7 +2144,7 @@
       "position": 999,
       "idgroup": 3
     },
-    "141": {
+    "148": {
       "id": 142,
       "title": "philosophybites",
       "url": "http://www.philosophybites.com/",
@@ -2059,7 +2158,7 @@
       "position": 999,
       "idgroup": 3
     },
-    "142": {
+    "149": {
       "id": 143,
       "title": "Philosopher's Zone",
       "url": "http://www.abc.net.au/rn/philosopherszone/",
@@ -2073,7 +2172,7 @@
       "position": 999,
       "idgroup": 3
     },
-    "143": {
+    "150": {
       "id": 144,
       "title": "BBC/OU Open2.net - Ethics Bites Podcast",
       "url": "http://www.open2.net/ethicsbites/",
@@ -2087,7 +2186,7 @@
       "position": 999,
       "idgroup": 3
     },
-    "144": {
+    "151": {
       "id": 145,
       "title": "McSweeney’s",
       "url": "http://www.mcsweeneys.net/",
@@ -2101,7 +2200,7 @@
       "position": 999,
       "idgroup": 2
     },
-    "145": {
+    "152": {
       "id": 146,
       "title": "thinkgeek",
       "url": "http://thinkgeek.com",
@@ -2115,7 +2214,7 @@
       "position": 999,
       "idgroup": 10
     },
-    "146": {
+    "153": {
       "id": 147,
       "title": "House - Full Episodes and Clips streaming online - Hulu",
       "url": "http://www.hulu.com/watch/285043/house-twenty-vicodin#s-p1-so-i0",
@@ -2129,7 +2228,7 @@
       "position": 999,
       "idgroup": 4
     },
-    "147": {
+    "154": {
       "id": 148,
       "title": "$ cheat git",
       "url": "http://cheat.errtheblog.com/s/git",
@@ -2143,7 +2242,7 @@
       "position": 999,
       "idgroup": 14
     },
-    "148": {
+    "155": {
       "id": 149,
       "title": "$ cheat osxbash",
       "url": "http://cheat.errtheblog.com/s/osxbash/",
@@ -2157,7 +2256,7 @@
       "position": 999,
       "idgroup": 14
     },
-    "149": {
+    "156": {
       "id": 150,
       "title": "$ cheat postgres",
       "url": "http://cheat.errtheblog.com/s/postgres/",
@@ -2171,7 +2270,7 @@
       "position": 999,
       "idgroup": 14
     },
-    "150": {
+    "157": {
       "id": 151,
       "title": "thegrissystem",
       "url": "http://thegridsystem.org",
@@ -2185,7 +2284,7 @@
       "position": 999,
       "idgroup": 2
     },
-    "151": {
+    "158": {
       "id": 152,
       "title": "vim.runpaint",
       "url": "http://vim.runpaint.org/toc/",
@@ -2199,7 +2298,7 @@
       "position": 999,
       "idgroup": 14
     },
-    "152": {
+    "159": {
       "id": 153,
       "title": "Dribbble - What are you working on?",
       "url": "http://dribbble.com/",
@@ -2213,7 +2312,7 @@
       "position": 999,
       "idgroup": 2
     },
-    "153": {
+    "160": {
       "id": 154,
       "title": "NOTCOT",
       "url": "http://www.notcot.com/",
@@ -2227,7 +2326,7 @@
       "position": 999,
       "idgroup": 10
     },
-    "154": {
+    "161": {
       "id": 155,
       "title": "CondeNastStore.com - Cartoons, Cover Art, Art Prints, Posters at The Condé Nast Store",
       "url": "http://www.condenaststore.com/",
@@ -2241,7 +2340,7 @@
       "position": 999,
       "idgroup": 10
     },
-    "155": {
+    "162": {
       "id": 156,
       "title": "LOOKBOOK.nu: collective fashion consciousness.",
       "url": "http://lookbook.nu/",
@@ -2255,7 +2354,7 @@
       "position": 999,
       "idgroup": 10
     },
-    "156": {
+    "163": {
       "id": 157,
       "title": "The Sartorialist",
       "url": "http://www.thesartorialist.com/",
@@ -2269,7 +2368,7 @@
       "position": 999,
       "idgroup": 10
     },
-    "157": {
+    "164": {
       "id": 158,
       "title": "A Ladies' Guide to Buying Drugs | VICE",
       "url": "http://www.vice.com/",
@@ -2283,21 +2382,7 @@
       "position": 999,
       "idgroup": 10
     },
-    "158": {
-      "id": 159,
-      "title": "Web Developer's Handbook | CSS, Web Development, Color Tools, SEO, Usability etc.",
-      "url": "http://www.alvit.de/handbook/",
-      "thumbnail": "http://www.churchofrabbit.com/wp-content/posts/web-developers-handbook.png",
-      "ts_created": 1321379856,
-      "visits": 1,
-      "visits_morning": 1,
-      "visits_afternoon": 0,
-      "visits_evening": 0,
-      "visits_night": 0,
-      "position": 999,
-      "idgroup": 6
-    },
-    "159": {
+    "165": {
       "id": 160,
       "title": "Church Of Rabbit",
       "url": "http://www.churchofrabbit.com/",
@@ -2311,7 +2396,7 @@
       "position": 999,
       "idgroup": 10
     },
-    "160": {
+    "166": {
       "id": 161,
       "title": "Lynch, Guide to Grammar and Style",
       "url": "http://ethnicity.rutgers.edu/~jlynch/writing/",
@@ -2325,7 +2410,7 @@
       "position": 999,
       "idgroup": 20
     },
-    "161": {
+    "167": {
       "id": 162,
       "title": "Purdue OWL: APA Formatting and Style Guide",
       "url": "http://owl.english.purdue.edu/owl/resource/560/01/",
@@ -2339,7 +2424,7 @@
       "position": 999,
       "idgroup": 20
     },
-    "162": {
+    "168": {
       "id": 163,
       "title": "Awwwards: Website Awards - Best websites around the World",
       "url": "http://www.awwwards.com/",
@@ -2353,7 +2438,7 @@
       "position": 999,
       "idgroup": 2
     },
-    "163": {
+    "169": {
       "id": 164,
       "title": "css Zen Garden: The Beauty in CSS Design",
       "url": "http://www.csszengarden.com/",
@@ -2367,21 +2452,7 @@
       "position": 999,
       "idgroup": 2
     },
-    "164": {
-      "id": 165,
-      "title": "Graphic Design Inspiration of Digital Photography and Photoshop Tutorials @Smashing Hub",
-      "url": "http://smashinghub.com/",
-      "thumbnail": "http://i.imgur.com/vksgI.png",
-      "ts_created": 1321384762,
-      "visits": 0,
-      "visits_morning": 0,
-      "visits_afternoon": 0,
-      "visits_evening": 0,
-      "visits_night": 0,
-      "position": 999,
-      "idgroup": 6
-    },
-    "165": {
+    "170": {
       "id": 166,
       "title": "Son of Citation Machine",
       "url": "http://citationmachine.net/index2.php",
@@ -2395,35 +2466,7 @@
       "position": 999,
       "idgroup": 20
     },
-    "166": {
-      "id": 167,
-      "title": "Best Open Source Resources for Web Developers | WebAppers",
-      "url": "http://www.webappers.com/",
-      "thumbnail": "http://www.churchofrabbit.com/wp-content/posts/webappers.png",
-      "ts_created": 1321389308,
-      "visits": 0,
-      "visits_morning": 0,
-      "visits_afternoon": 0,
-      "visits_evening": 0,
-      "visits_night": 0,
-      "position": 999,
-      "idgroup": 6
-    },
-    "167": {
-      "id": 168,
-      "title": "Ars Technica",
-      "url": "http://arstechnica.com/",
-      "thumbnail": "http://go.eset.com/us/images/press_images/ars_technica_logo_200.jpg",
-      "ts_created": 1321389545,
-      "visits": 1,
-      "visits_morning": 0,
-      "visits_afternoon": 1,
-      "visits_evening": 0,
-      "visits_night": 0,
-      "position": 999,
-      "idgroup": 6
-    },
-    "168": {
+    "171": {
       "id": 169,
       "title": "Icon Search Engine - Download 308,215 Free Icons, PNG Icons, Web Icons",
       "url": "http://findicons.com/",
@@ -2437,35 +2480,7 @@
       "position": 999,
       "idgroup": 2
     },
-    "169": {
-      "id": 170,
-      "title": "CSS-Tricks",
-      "url": "http://css-tricks.com/",
-      "thumbnail": "http://cdn.css-tricks.com/wp-content/themes/CSS-Tricks-9/images/CSS-Tricks-logo.png",
-      "ts_created": 1321389976,
-      "visits": 0,
-      "visits_morning": 0,
-      "visits_afternoon": 0,
-      "visits_evening": 0,
-      "visits_night": 0,
-      "position": 999,
-      "idgroup": 6
-    },
-    "170": {
-      "id": 171,
-      "title": "QuirksMode - for all your browser quirks",
-      "url": "http://www.quirksmode.org/",
-      "thumbnail": "http://makeawesomeweb.com/wp-content/uploads/2011/06/QuirksMode.png",
-      "ts_created": 1321390061,
-      "visits": 0,
-      "visits_morning": 0,
-      "visits_afternoon": 0,
-      "visits_evening": 0,
-      "visits_night": 0,
-      "position": 999,
-      "idgroup": 6
-    },
-    "171": {
+    "172": {
       "id": 172,
       "title": "Icon Search Engine | Iconfinder",
       "url": "http://www.iconfinder.com/",
@@ -2478,20 +2493,6 @@
       "visits_night": 0,
       "position": 999,
       "idgroup": 2
-    },
-    "172": {
-      "id": 173,
-      "title": "24 ways - web design and development articles and tutorials for advent",
-      "url": "http://24ways.org/",
-      "thumbnail": "http://demosthenes.info/assets/images/icons/24ways.png",
-      "ts_created": 1321392977,
-      "visits": 1,
-      "visits_morning": 0,
-      "visits_afternoon": 1,
-      "visits_evening": 0,
-      "visits_night": 0,
-      "position": 999,
-      "idgroup": 6
     },
     "173": {
       "id": 174,
@@ -2618,6 +2619,20 @@
       "visits_night": 0,
       "position": 999,
       "idgroup": 14
+    },
+    "182": {
+      "id": 184,
+      "title": "MySQL Cheat Sheet",
+      "url": "http://www.nparikh.org/unix/mysql.php",
+      "thumbnail": "http://blog.milford.io/wp-content/uploads/2011/04/mysql1.png",
+      "ts_created": 1321651516,
+      "visits": 1,
+      "visits_morning": 0,
+      "visits_afternoon": 1,
+      "visits_evening": 0,
+      "visits_night": 0,
+      "position": 999,
+      "idgroup": 14
     }
   },
   "groups": {
@@ -2731,3 +2746,4 @@
     }
   }
 }
+
