@@ -1,28 +1,36 @@
-@charset "UTF-8";
-/* line 1, ../sass/style.scss */
+@import url(http://fonts.googleapis.com/css?family=Sancreek);
+/* line 3, ../sass/old.scss */
 #menu li {
   font-size: 24px;
 }
 
-/*#groups { width: 100%; }*/
-/* line 7, ../sass/style.scss */
+/* line 6, ../sass/old.scss */
+#groups {
+  position: absolute !important;
+}
+/* line 9, ../sass/old.scss */
 #groups li a {
   font-size: 24px !important;
 }
 
-/*#groups li:first-child:before { content: "∃"; font-size: 24px; color: #fff; }*/
-@import url(http://fonts.googleapis.com/css?family=Sancreek);
-/* line 15, ../sass/style.scss */
+/* line 13, ../sass/old.scss */
+#pages:before {
+  content: ".";
+  float: left;
+  display: block;
+  position: relative;
+}
+/* line 19, ../sass/old.scss */
 #pages .link a .thumbnail_container {
   position: relative;
   z-index: 1;
   padding: 0 !important;
 }
-/* line 19, ../sass/style.scss */
+/* line 23, ../sass/old.scss */
 #pages .link:hover a .title {
   color: #333 !important;
 }
-/* line 21, ../sass/style.scss */
+/* line 25, ../sass/old.scss */
 #pages .link a .title {
   position: absolute;
   z-index: 9001;
@@ -38,4 +46,11 @@
   bottom: 13px !important;
   margin: -3px 0 0 0 !important;
   padding: 0 !important;
+}
+
+/* line 41, ../sass/old.scss */
+#main {
+  display: inline-table;
+  width: 100%;
+  height: 100%;
 }

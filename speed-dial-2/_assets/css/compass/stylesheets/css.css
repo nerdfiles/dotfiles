@@ -1,0 +1,254 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Sancreek);
+/* line 3, ../sass/css.scss */
+::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+}
+
+/* line 7, ../sass/css.scss */
+::-webkit-scrollbar:hover {
+  height: 18px;
+}
+
+/* line 11, ../sass/css.scss */
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  height: 15px;
+  width: 13px;
+  display: block;
+  background: #101211;
+  background-repeat: no-repeat;
+}
+
+/* line 18, ../sass/css.scss */
+::-webkit-scrollbar-button:horizontal:decrement {
+  background-image: url(scrollbar/horizontal-decrement-arrow.png);
+  background-position: 4px 3px;
+}
+
+/* line 22, ../sass/css.scss */
+::-webkit-scrollbar-button:horizontal:increment {
+  background-image: url(scrollbar/horizontal-increment-arrow.png);
+  background-position: 3px 3px;
+}
+
+/* line 26, ../sass/css.scss */
+::-webkit-scrollbar-button:vertical:decrement {
+  background-image: url(scrollbar/vertical-decrement-arrow.png);
+  background-position: 3px 4px;
+  background: #e0e0e0;
+}
+
+/* line 31, ../sass/css.scss */
+::-webkit-scrollbar-button:vertical:increment {
+  background-image: url(scrollbar/vertical-increment-arrow.png);
+  background-position: 3px 4px;
+  background: #e0e0e0;
+}
+
+/* line 36, ../sass/css.scss */
+::-webkit-scrollbar-button:horizontal:decrement:active {
+  background-image: url(scrollbar/horizontal-decrement-arrow-active.png);
+}
+
+/* line 39, ../sass/css.scss */
+::-webkit-scrollbar-button:horizontal:increment:active {
+  background-image: url(scrollbar/horizontal-increment-arrow-active.png);
+}
+
+/* line 42, ../sass/css.scss */
+::-webkit-scrollbar-button:vertical:decrement:active {
+  background-image: url(scrollbar/vertical-decrement-arrow-active.png);
+}
+
+/* line 45, ../sass/css.scss */
+::-webkit-scrollbar-button:vertical:increment:active {
+  background-image: url(scrollbar/vertical-increment-arrow-active.png);
+}
+
+/* line 48, ../sass/css.scss */
+::-webkit-scrollbar-track-piece {
+  background-color: #151716;
+  background-color: #e0e0e0;
+}
+
+/* line 52, ../sass/css.scss */
+::-webkit-scrollbar-thumb:vertical {
+  height: 50px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #4d4d4d), color-stop(100%, #333333));
+  border: 1px solid #0d0d0d;
+  border-top: 1px solid #666666;
+  border-left: 1px solid #666666;
+}
+
+/* line 59, ../sass/css.scss */
+::-webkit-scrollbar-thumb:horizontal {
+  width: 50px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4d4d4d), color-stop(100%, #333333));
+  border: 1px solid #1f1f1f;
+  border-top: 1px solid #666666;
+  border-left: 1px solid #666666;
+}
+
+/* line 66, ../sass/css.scss */
+#menu li {
+  font-size: 24px;
+}
+
+/* line 69, ../sass/css.scss */
+#main {
+  margin-bottom: 0 !important;
+  position: static;
+  display: inline-table;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 76, ../sass/css.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* line 82, ../sass/css.scss */
+.home {
+  margin-top: 1px !important;
+}
+
+/* line 85, ../sass/css.scss */
+#groups {
+  position: absolute !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 20% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  /*overflow-y: scroll !important; for windows people */
+  overflow-y: visible !important;
+  background: #e0e0e0;
+}
+/* line 96, ../sass/css.scss */
+#groups li {
+  position: relative;
+  z-index: 200;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  display: block;
+  float: none;
+  clear: left;
+  text-align: center;
+}
+/* line 97, ../sass/css.scss */
+#groups li a {
+  font-size: 4em !important;
+  text-decoration: none;
+  font-size: 20px;
+  box-shadow: none;
+  border-radius: 0;
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+  text-align: left;
+  display: block;
+  padding: 0;
+  color: #444;
+  opacity: 0.8;
+  -webkit-transition: .2s ease-in-out;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 124, ../sass/css.scss */
+#pages {
+  clear: both;
+  margin: 0 auto;
+  position: relative;
+  top: 15px;
+  text-align: center;
+  text-align: center;
+  left: auto !important;
+  height: 100% !important;
+  width: 80% !important;
+  margin-left: 20% !important;
+  background: white !important;
+  top: 0 !important;
+}
+/* line 125, ../sass/css.scss */
+#pages li {
+  vertical-align: middle;
+  position: relative !important;
+  z-index: 2;
+  float: none !important;
+  top: auto !important;
+  width: 15%;
+  left: auto !important;
+  padding: 0 !important;
+  margin: 1em 0 1.5em !important;
+  display: inline-block;
+  height: 20% !important;
+}
+/* line 149, ../sass/css.scss */
+#pages .link a {
+  height: 100% !important;
+}
+/* line 151, ../sass/css.scss */
+#pages .link a .thumbnail_container {
+  position: relative;
+  z-index: 1;
+  padding: 0 !important;
+  width: 100%;
+  height: 100%;
+  float: left;
+  display: block;
+  border-radius: 10px !important;
+  border-radius: 0px !important;
+}
+/* line 161, ../sass/css.scss */
+#pages #emptyrow {
+  left: auto !important;
+  top: -1em !important;
+  position: absolute !important;
+  right: 1em;
+  width: 48px;
+  height: 48px;
+}
+/* line 168, ../sass/css.scss */
+#pages:before {
+  content: ".";
+  float: left;
+  display: block;
+  position: relative;
+}
+/* line 174, ../sass/css.scss */
+#pages .link a .thumbnail_container {
+  position: relative;
+  z-index: 1;
+  padding: 0 !important;
+}
+/* line 178, ../sass/css.scss */
+#pages .link:hover a .title {
+  color: #fff !important;
+}
+/* line 180, ../sass/css.scss */
+#pages .link a .title {
+  position: relative !important;
+  z-index: 9001;
+  font-family: 'Silkscreen', 'Sancreek', cursive;
+  font-size: 8px !important;
+  line-height: "";
+  letter-spacing: "";
+  font-variant: "";
+  text-transform: "";
+  text-shadow: "";
+  font-weight: "";
+  color: #fff !important;
+  bottom: 13px !important;
+  margin: -3px 0 0 0 !important;
+  padding: 0 !important;
+}
+
+/*#groups li:first-child:before { content: "∃"; font-size: 24px; color: #fff; }*/
