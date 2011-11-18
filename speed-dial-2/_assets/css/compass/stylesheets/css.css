@@ -113,12 +113,12 @@ body {
   padding: 0 !important;
 }
 
-/* line 82, ../sass/css.scss */
+/* line 83, ../sass/css.scss */
 .home {
   margin-top: 1px !important;
 }
 
-/* line 85, ../sass/css.scss */
+/* line 86, ../sass/css.scss */
 #groups {
   position: absolute !important;
   padding-left: 0 !important;
@@ -130,7 +130,7 @@ body {
   overflow-y: visible !important;
   background: #e0e0e0;
 }
-/* line 96, ../sass/css.scss */
+/* line 97, ../sass/css.scss */
 #groups li {
   position: relative;
   z-index: 200;
@@ -142,24 +142,26 @@ body {
   clear: left;
   text-align: center;
 }
-/* line 97, ../sass/css.scss */
+/* line 98, ../sass/css.scss */
 #groups li a {
+  cursor: default;
   font-size: 4em !important;
   text-decoration: none;
   font-size: 20px;
-  box-shadow: none;
-  border-radius: 0;
   font-family: helvetica, sans-serif;
   font-weight: bold;
-  text-align: left;
   display: block;
   padding: 0;
-  color: #444;
+  color: #ccc;
   opacity: 0.8;
   -webkit-transition: .2s ease-in-out;
   padding: 0;
   width: 100%;
   text-align: center;
+}
+/* line 113, ../sass/css.scss */
+#groups li a:hover {
+  color: #444;
 }
 
 /* line 124, ../sass/css.scss */
@@ -174,10 +176,13 @@ body {
   height: 100% !important;
   width: 80% !important;
   margin-left: 20% !important;
-  background: white !important;
+  background-image: url("file:///Users/nerdfiles/Downloads/8thkz9t.png") !important;
+  background-repeat: repeat;
+  background-position: 50% 50%;
+  background: #fff !important;
   top: 0 !important;
 }
-/* line 125, ../sass/css.scss */
+/* line 126, ../sass/css.scss */
 #pages li {
   vertical-align: middle;
   position: relative !important;
@@ -191,11 +196,12 @@ body {
   display: inline-block;
   height: 20% !important;
 }
-/* line 149, ../sass/css.scss */
+/* line 154, ../sass/css.scss */
 #pages .link a {
   height: 100% !important;
+  cursor: default;
 }
-/* line 151, ../sass/css.scss */
+/* line 157, ../sass/css.scss */
 #pages .link a .thumbnail_container {
   position: relative;
   z-index: 1;
@@ -207,7 +213,7 @@ body {
   border-radius: 10px !important;
   border-radius: 0px !important;
 }
-/* line 161, ../sass/css.scss */
+/* line 167, ../sass/css.scss */
 #pages #emptyrow {
   left: auto !important;
   top: -1em !important;
@@ -216,24 +222,24 @@ body {
   width: 48px;
   height: 48px;
 }
-/* line 168, ../sass/css.scss */
+/* line 174, ../sass/css.scss */
 #pages:before {
   content: ".";
   float: left;
   display: block;
   position: relative;
 }
-/* line 174, ../sass/css.scss */
+/* line 180, ../sass/css.scss */
 #pages .link a .thumbnail_container {
   position: relative;
   z-index: 1;
   padding: 0 !important;
 }
-/* line 178, ../sass/css.scss */
+/* line 184, ../sass/css.scss */
 #pages .link:hover a .title {
   color: #fff !important;
 }
-/* line 180, ../sass/css.scss */
+/* line 186, ../sass/css.scss */
 #pages .link a .title {
   position: relative !important;
   z-index: 9001;

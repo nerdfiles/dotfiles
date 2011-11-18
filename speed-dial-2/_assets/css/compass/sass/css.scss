@@ -74,6 +74,7 @@ background-color: #e0e0e0; }
   height: 100%; }
 
 body {
+  
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizelegibility;
   margin: 0 !important;
@@ -95,22 +96,21 @@ body {
   &:after {}
   li {
     a {
+      cursor: default;
       font-size: 4em !important;
       text-decoration: none;
       font-size: 20px;
-      box-shadow: none;
-      border-radius: 0;
       font-family: helvetica, sans-serif;
       font-weight: bold;
-      text-align: left;
       display: block;
       padding: 0;
-      color: #444;
+      color: #ccc;
       opacity: 0.8;
       -webkit-transition: .2s ease-in-out;
       padding: 0;
       width: 100%;
-      text-align: center; }
+      text-align: center;
+      &:hover { color: #444; } }
     position: relative;
     z-index: 200;
     padding-left: 0;
@@ -122,6 +122,7 @@ body {
     text-align: center; } }
 
 #pages {
+
   li {
     vertical-align: middle;
     position: relative !important;
@@ -134,7 +135,8 @@ body {
     margin: 1em 0 1.5em !important;
     display: inline-block;
     height: 20% !important; }
-  clear: both;
+
+    clear: both;
   margin: 0 auto;
   position: relative;
   top: 15px;
@@ -144,10 +146,14 @@ body {
   height: 100% !important;
   width: 80% !important;
   margin-left: 20% !important;
-  background: white !important;
+  background-image: url('file:///Users/nerdfiles/Downloads/8thkz9t.png') !important; 
+  background-repeat: repeat;
+  background-position: 50% 50%;
+  background: #fff !important;
   top: 0 !important;
   .link a {
     height: 100% !important;
+    cursor: default;
     .thumbnail_container {
       position: relative;
       z-index: 1;
