@@ -5,6 +5,7 @@ endif
 " nerdtree
 let g:NERDTreeWinSize = 30
 nmap <silent> <c-n> :NERDTreeToggle<CR>
+autocmd VimEnter * NERDTree
 
 " highlight current line in insert mode
 autocmd InsertLeave * se nocul
