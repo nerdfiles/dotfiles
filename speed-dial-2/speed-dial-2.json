@@ -6,17 +6,18 @@
     "sys.rows": "3",
     "options.padding": "12",
     "options.colors.title": "FFFFFF",
-    "lastdeleted": "null|||undefined",
+    "options.background": "http://anfischer.com/wp-content/uploads/lichtzeichnungen/anfischer_lichtzeichnung_4.jpg",
     "options.dialSpace": "95",
     "refresh_id": "",
-    "options.background": "http://anfischer.com/wp-content/uploads/lichtzeichnungen/anfischer_lichtzeichnung_4.jpg",
+    "lastdeleted": "null|||undefined",
     "options.dialstyle.titleposition": "bottom",
-    "addPageFromContextMenu": "",
+    "addPageFromContextMenu": null,
     "refreshThumbnail": "",
     "refresh_create": "false",
+    "options.sidebar.delicious.favoriteTags": "development,jquery,css,python,django,nodejs",
     "options.colors.dialbginner": "FFFFFF",
     "options.sidebar.showBookmarks": "1",
-    "sys.containerwidth": "1545.3999999999999px",
+    "options.columns": "6",
     "options.colors.borderover": "FFFFFF",
     "options.repeatbackground": "no-repeat",
     "options.titleAlign": "right",
@@ -26,18 +27,18 @@
     "options.fontface": "'Bookman Old Style', serif;",
     "options.highlight": "0",
     "options.apps.iconsize": "extrasmall",
-    "options.thumbnailQuality": "high",
     "options.showAddButton": "1",
+    "sys.containerwidth": "-883.6363636363635px",
     "options.dialstyle.corners": "12",
     "v1573": "false",
-    "sys.dialheight": "167.0189236111111",
-    "options.colors.dialbgover": "FFFFFF",
+    "sys.dialheight": "-57.2",
+    "options.fontsize": "8",
     "options.refreshThumbnails": "0",
     "options.apps.show": "1",
+    "options.centerThumbnailsVertically": "2",
     "options.sidebar.showApps": "1",
     "options.sidebar.showHistory": "1",
-    "options.defaultGroupName": "♜",
-    "options.fontsize": "8",
+    "options.sidebaractivation": "position",
     "options.fontstyle": "font-weight:bold;font-style:normal;",
     "options.backgroundPattern": "null",
     "options.showVisits": "0",
@@ -46,23 +47,22 @@
     "options.colors.dialbginnerover": "FFFFFF",
     "options.useDeliciousShortcut": "1",
     "options.colors.border": "FFFFFF",
-    "sys.dialwidth": "237.56666666666663",
+    "sys.dialwidth": "-167.27272727272725",
     "firstTime": "false",
     "options.centerVertically": "0",
     "options.sidebar": "1",
+    "options.defaultGroupName": "♜",
     "options.backgroundPosition": "center top",
     "options.alwaysNewTab": "1",
     "options.appOrder": "[\"ejidjjhkpiempkbhmpbfngldlkglhimk\",\"ejjicmeblgpmajnghnpcppodonldlgfn\",\"pjjhlfkghdhmijklfnahfkpgmhcmfgcm\",\"fkkaebihfmbofclegkcfkkemepfehibg\",\"mhgffcfekbglhpcdjkhhjekhdnddkflg\"]",
-    "requestThumbnail": "",
+    "requestThumbnail": null,
+    "options.thumbnailQuality": "high",
     "options.apps.position": "bottom",
-    "options.customCss": "/* line 1, ../sass/style.scss */\n#menu li {\n  font-size: 24px;\n}\n\n/*#groups { width: 100%; }*/\n/* line 7, ../sass/style.scss */\n#groups li a {\n  font-size: 24px !important;\n}\n\n/*#groups li:first-child:before { content: \"∃\"; font-size: 24px; color: #fff; }*/\n@import url(http://fonts.googleapis.com/css?family=Sancreek);\n/* line 15, ../sass/style.scss */\n#pages .link a .thumbnail_container {\n  position: relative;\n  z-index: 1;\n  padding: 0 !important;\n}\n/* line 19, ../sass/style.scss */\n#pages .link:hover a .title {\n  color: #333 !important;\n}\n/* line 21, ../sass/style.scss */\n#pages .link a .title {\n  position: absolute;\n  z-index: 9001;\n  font-family: 'Silkscreen', 'Sancreek', cursive;\n  font-size: 8px !important;\n  line-height: \"\";\n  letter-spacing: \"\";\n  font-variant: \"\";\n  text-transform: \"\";\n  text-shadow: \"\";\n  font-weight: \"\";\n  color: #fff !important;\n  bottom: 13px !important;\n  margin: -3px 0 0 0 !important;\n  padding: 0 !important;\n}\n",
-    "options.centerThumbnailsVertically": "2",
+    "options.colors.dialbgover": "FFFFFF",
     "sys.cellspacing": "24",
     "options.sidebar.showBookmarksURL": "1",
     "options.sidebar.deliciousUsername": "nerdfiles",
-    "options.sidebaractivation": "scroll",
     "options.sidebar.showDelicious": "1",
-    "options.columns": "6",
     "options.apps.align": "center",
     "refresh_url": "",
     "sys.cols": "6",
@@ -189,9 +189,9 @@
       "url": "https://mail.google.com/mail/",
       "thumbnail": "http://upload.wikimedia.org/wikipedia/en/0/0a/Gmail_logo.png",
       "ts_created": 1320727662,
-      "visits": 10,
+      "visits": 11,
       "visits_morning": 5,
-      "visits_afternoon": 1,
+      "visits_afternoon": 2,
       "visits_evening": 1,
       "visits_night": 3,
       "position": 2,
@@ -271,13 +271,13 @@
       "id": 15,
       "title": "Font Squirrel | Handpicked free fonts for graphic designers with commercial-use licenses.",
       "url": "http://www.fontsquirrel.com/",
-      "thumbnail": "http://webpublishing2.files.wordpress.com/2011/10/screen-shot-2011-10-04-at-12-12-52-pm.png?w=253&h=136",
+      "thumbnail": "http://www.bluefishgroup.com/article-assets/images/web-fonts-font-face/font-squirrel-logo.png",
       "ts_created": 1321389854,
-      "visits": 1,
+      "visits": 2,
       "visits_morning": 0,
       "visits_afternoon": 1,
       "visits_evening": 0,
-      "visits_night": 0,
+      "visits_night": 1,
       "position": 2,
       "idgroup": 19
     },
@@ -329,11 +329,11 @@
       "url": "http://kippt.com/",
       "thumbnail": "http://3.bp.blogspot.com/_TkhlSyyP58U/TT1cmFv0n6I/AAAAAAAAH1g/h7y1tZHkBBo/s1600/Screen+shot+2011-01-24+at+6.02.32+AM.png",
       "ts_created": 1320726462,
-      "visits": 11,
+      "visits": 14,
       "visits_morning": 4,
       "visits_afternoon": 1,
       "visits_evening": 6,
-      "visits_night": 0,
+      "visits_night": 3,
       "position": 3,
       "idgroup": 1
     },
@@ -539,11 +539,11 @@
       "url": "http://www.last.fm/user/wittysense",
       "thumbnail": "http://farm6.static.flickr.com/5228/5612548029_964fc1fa0b_o.png",
       "ts_created": 1320732848,
-      "visits": 4,
+      "visits": 5,
       "visits_morning": 0,
       "visits_afternoon": 0,
       "visits_evening": 2,
-      "visits_night": 2,
+      "visits_night": 3,
       "position": 5,
       "idgroup": 13
     },
@@ -1477,8 +1477,8 @@
       "url": "http://code.google.com/apis/gdata/docs/directory.html",
       "thumbnail": "http://blogoscoped.com/files/google-data-api.gif",
       "ts_created": 1321380507,
-      "visits": 1,
-      "visits_morning": 0,
+      "visits": 2,
+      "visits_morning": 1,
       "visits_afternoon": 1,
       "visits_evening": 0,
       "visits_night": 0,
@@ -1575,9 +1575,9 @@
       "url": "http://www.w3.org/",
       "thumbnail": "http://www.w3.org/2011/10/w3conf-small.png",
       "ts_created": 1320729162,
-      "visits": 2,
+      "visits": 3,
       "visits_morning": 1,
-      "visits_afternoon": 0,
+      "visits_afternoon": 1,
       "visits_evening": 0,
       "visits_night": 1,
       "position": 17,
@@ -1645,11 +1645,11 @@
       "url": "http://www.hulu.com/",
       "thumbnail": "http://farm6.static.flickr.com/5185/5612548147_3199620e1e_o.png",
       "ts_created": 1320729162,
-      "visits": 0,
+      "visits": 1,
       "visits_morning": 0,
       "visits_afternoon": 0,
       "visits_evening": 0,
-      "visits_night": 0,
+      "visits_night": 1,
       "position": 999,
       "idgroup": 4
     },
@@ -1959,7 +1959,7 @@
       "visits_evening": 0,
       "visits_night": 0,
       "position": 999,
-      "idgroup": 2
+      "idgroup": 6
     },
     "135": {
       "id": 136,
@@ -2247,11 +2247,11 @@
       "url": "http://lookbook.nu/",
       "thumbnail": "http://2.bp.blogspot.com/_JKIOf0YPXN8/S_7aRkeHCtI/AAAAAAAAA4I/2evbHmO_unU/s400/nancy1.jpg",
       "ts_created": 1321377973,
-      "visits": 0,
+      "visits": 1,
       "visits_morning": 0,
       "visits_afternoon": 0,
       "visits_evening": 0,
-      "visits_night": 0,
+      "visits_night": 1,
       "position": 999,
       "idgroup": 10
     },
@@ -2261,11 +2261,11 @@
       "url": "http://www.thesartorialist.com/",
       "thumbnail": "http://www.thesartorialist.com/wp-content/themes/sartorialist/images/logo.png",
       "ts_created": 1321377973,
-      "visits": 1,
+      "visits": 2,
       "visits_morning": 1,
       "visits_afternoon": 0,
       "visits_evening": 0,
-      "visits_night": 0,
+      "visits_night": 1,
       "position": 999,
       "idgroup": 10
     },
@@ -2575,7 +2575,7 @@
       "visits_evening": 0,
       "visits_night": 0,
       "position": 999,
-      "idgroup": 12
+      "idgroup": 14
     },
     "179": {
       "id": 180,
@@ -2590,6 +2590,34 @@
       "visits_night": 0,
       "position": 999,
       "idgroup": 12
+    },
+    "180": {
+      "id": 181,
+      "title": "CoffeeScript",
+      "url": "http://jashkenas.github.com/coffee-script/",
+      "thumbnail": "http://makeawesomeweb.com/wp-content/uploads/2011/07/CoffeeScript.png",
+      "ts_created": 1321561119,
+      "visits": 1,
+      "visits_morning": 0,
+      "visits_afternoon": 1,
+      "visits_evening": 0,
+      "visits_night": 0,
+      "position": 999,
+      "idgroup": 12
+    },
+    "181": {
+      "id": 182,
+      "title": "MultiMarkdown Syntax Guide - GitHub",
+      "url": "https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide",
+      "thumbnail": "http://liveyourbestdreams.com/images/multimarkdown-composer-icon.gif",
+      "ts_created": 1321561200,
+      "visits": 0,
+      "visits_morning": 0,
+      "visits_afternoon": 0,
+      "visits_evening": 0,
+      "visits_night": 0,
+      "position": 999,
+      "idgroup": 14
     }
   },
   "groups": {
@@ -2624,83 +2652,82 @@
       "position": 6
     },
     "5": {
-      "id": 6,
-      "title": "⚙",
+      "id": 17,
+      "title": "✪",
       "color": "FFFFFF",
       "position": 7
     },
     "6": {
-      "id": 17,
-      "title": "✪",
+      "id": 6,
+      "title": "⚙",
       "color": "FFFFFF",
-      "position": 9
+      "position": 8
     },
     "7": {
       "id": 2,
       "title": "⊛",
       "color": "FFFFFF",
-      "position": 10
+      "position": 9
     },
     "8": {
       "id": 20,
       "title": "✍",
       "color": "FFFFFF",
-      "position": 11
+      "position": 10
     },
     "9": {
       "id": 13,
       "title": "♬",
       "color": "FFFFFF",
-      "position": 12
+      "position": 11
     },
     "10": {
       "id": 7,
       "title": "※",
       "color": "FFFFFF",
-      "position": 13
+      "position": 12
     },
     "11": {
       "id": 3,
       "title": "♛",
       "color": "FFFFFF",
-      "position": 14
+      "position": 13
     },
     "12": {
       "id": 5,
       "title": "☕",
       "color": "FFFFFF",
-      "position": 15
+      "position": 14
     },
     "13": {
       "id": 10,
       "title": "♚",
       "color": "FFFFFF",
-      "position": 16
+      "position": 15
     },
     "14": {
       "id": 15,
       "title": "⊞",
       "color": "FFFFFF",
-      "position": 17
+      "position": 16
     },
     "15": {
       "id": 4,
       "title": "⊑",
       "color": "FFFFFF",
-      "position": 18
+      "position": 17
     },
     "16": {
       "id": 9,
       "title": "⧈",
       "color": "FFFFFF",
-      "position": 19
+      "position": 18
     },
     "17": {
       "id": 11,
       "title": "$",
       "color": "FFFFFF",
-      "position": 20
+      "position": 19
     }
   }
 }
-
