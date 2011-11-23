@@ -11,24 +11,38 @@ autocmd VimEnter * NERDTree
 autocmd InsertLeave * se nocul
 autocmd InsertEnter * se cul 
 
+set transparency=30
+
 " set line number
 set number
 
-" Enable folding by fold markers
+" enable folding by fold markers
 set foldmethod=marker 
 
-" Autoclose folds, when moving out of them
+" autoclose folds, when moving out of them
 set foldclose=all
 
-" stuff
-set nocompatible        " Use Vim defaults (much better!)
-set bs=2                " allow backspacing over everything in insert mode
-"set ai                 " always set autoindenting on
-"set backup             " keep a backup file
-set viminfo='20,\"50    " read/write a .viminfo file, don't store more
-                        " than 50 lines of registers
-set history=50          " keep 50 lines of command line history
-set ruler               " show the cursor position all the time
+" use Vim defaults (much better!) -- not compataible with transparency
+"set nocompatible        
+
+" allow backspacing over everything in insert mode
+set bs=2                
+
+" always set autoindenting on
+set ai                 
+
+" keep a backup file
+"set backup             
+
+" read/write a .viminfo file, don't store more than 50 lines of registers
+set viminfo='20,\"50    
+
+" keep 50 lines of command line history
+set history=50          
+
+" show the cursor position all the time
+set ruler               
+
 set laststatus=2
 
 " backup to ~/.tmp
@@ -45,16 +59,16 @@ set incsearch
 set showcmd
 set nowrap
 
-" Jump 5 lines when running out of the screen
+" jump 5 lines when running out of the screen
 set scrolljump=5
 
-" Indicate jump out of the screen when 3 lines before end of the screen
+" indicate jump out of the screen when 3 lines before end of the screen
 set scrolloff=3
 
-" Repair wired terminal/vim settings
+" repair wired terminal/vim settings
 set backspace=start,eol,indent
 
-" Allow file inline modelines to provide settings
+" allow file inline modelines to provide settings
 set modeline
 
 
@@ -64,13 +78,20 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 
-syntax on             " Enable syntax highlighting
-filetype on           " Enable filetype detection
-filetype indent on    " Enable filetype-specific indenting
-filetype plugin on    " Enable filetype-specific plugins
+" enable syntax highlighting
+syntax on             
 
-colorscheme desert
+" enable filetype detection
+filetype on           
 
+" enable filetype-specific indenting
+filetype indent on    
+
+" enable filetype-specific plugins
+filetype plugin on    
+
+" colors!
+colors torte
 
 " {{{ Execute in shell 
 " http://vim.wikia.com/wiki/Replace_a_builtin_command_using_cabbrev
