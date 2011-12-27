@@ -11,7 +11,7 @@ autocmd VimEnter * NERDTree
 autocmd InsertLeave * se nocul
 autocmd InsertEnter * se cul 
 
-set transparency=30
+"set transparency=30
 
 " set line number
 set number
@@ -91,7 +91,15 @@ filetype indent on
 filetype plugin on    
 
 " colors!
-colors torte
+colorscheme no_quarter
+colorscheme fruity
+set transparency=40
+if has('gui_running')
+  set guifont=Anonymous_Pro:h16
+endif
+set linespace=2
+set lines=42
+
 
 " {{{ Execute in shell 
 " http://vim.wikia.com/wiki/Replace_a_builtin_command_using_cabbrev
@@ -129,4 +137,5 @@ cabbrev git Git
 cabbrev svn Svn
 
 " }}}
+
 
