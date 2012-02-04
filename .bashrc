@@ -38,23 +38,6 @@ function set_django() {
 
 # ============================================= ALIASES == #
 
-# == Dir navigation == #
-
-alias ..='cd ..'
-#alias cd..='cd ..'
-alias .='echo $PWD'
-alias ~='cd ~'
-#alias more='less'
-
-# == File/Dir Managemenet == #
-
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-alias mkdir='mkdir -p'
-
-# ============================================= MORE ALIASES == #
-
 alias macvim='open -a /Applications/MacVim/MacVim.app/Contents/MacOS/MacVim'
 alias ntp="sudo /usr/sbin/ntpdate time-a.nist.gov"
 #alias nano='nano -w'
@@ -62,6 +45,56 @@ alias vim='vim -X'
 #alias xcomp='xcompmgr -cCfF -r7 -o.65 -l-10 -t-8 -D7'
 #alias m='mate'
 #alias ss='./script/server'
+
+alias jangy='python manage.py'
+alias jangyrun='python manage.py runserver'
+alias jangyshell='python manage.py shell'
+alias jangysql='python manage.py sql'
+alias jangysqlall='python manage.py sqlall'
+alias jangystartapp='django-admin.py startapp'
+alias jangystartproject='django-admin.py startproject'
+alias jangysync='python manage.py syncdb'
+alias jangydump='python manage.py dumpdata'
+alias jangyload='python manage.py loaddata'
+alias jangycleanup='python manage.py cleanup'
+alias jangyflush='python manage.py flush'
+alias jangydbshell='python manage.py dbshell'
+alias jangyinspect='python manage.py inspectdb'
+alias jangymigrate='python manage.py migrate'
+alias jangyschemamigration='python manage.py schemamigration'
+alias jangyevolve='python manage.py evolve --hint --execute'
+alias jangygenfix='python manage.py generate_fixture'
+alias jangydumpobj='python manage.py dump_object'
+
+alias pbrew='pythonbrew'
+alias compassing='compass watch compass'
+alias touchcompass='compass create compass'
+alias fuck_it="git commit -am 'cleanup docs ubuntu version'; git push origin dev; fab sync_staging; fab pull_staging; git checkout dev"
+
+alias suspend='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
+
+# == Dir navigation == #
+
+alias ..='cd ..'
+alias .='pwd'
+alias ~='cd ~'
+alias more='less'
+
+# == LS 
+
+alias lsl='ls -mrA' # "list"
+alias lsL='ls -s | more'
+alias lsa='ls -lar' # all
+alias lsr='ls -spr' # reverse alpha
+alias lsR='ls -R'
+alias lsp='ls -p' # column dir
+
+# == File/Dir Managemenet == #
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias mkdir='mkdir -p'
 
 # ============================================= COLORS == #
 
