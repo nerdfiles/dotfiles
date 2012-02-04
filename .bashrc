@@ -119,8 +119,6 @@ export CLICOLOR="YES"
 
 # == Aliases == #
 
-alias ls='ls -G'
-alias lsa='ls -laG'
 alias grep='grep --color=auto'
 
 # ============================================= UNICODE == #
