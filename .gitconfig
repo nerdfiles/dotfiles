@@ -3,18 +3,14 @@
   email = [email] 
   user = [user]
   token = [api_key] 
-
-# ~/.gitconfig from @boblet
-# initially based on http://rails.wincent.com/wiki/Git_quickstart
-
 [core]
   excludesfile = /Users/[user]/.gitignore
   legacyheaders = false # >git 1.5
   quotepath = false
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-# http://stackoverflow.com/questions/136178/git-diff-handling-long-lines
   pager = less -r
-# if ↑ doesn’t work, try: pager = less -+$LESS -FRX
+  # if ↑ doesn’t work, try: pager = less -+$LESS -FRX
+  # http://stackoverflow.com/questions/136178/git-diff-handling-long-lines
 [color]
   ui = auto
   interactive = auto
