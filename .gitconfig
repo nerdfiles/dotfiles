@@ -31,7 +31,10 @@
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   l = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+  lx = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   ll = log --stat --abbrev-commit
+  loga = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  graph = log —-graph —-all —-pretty=oneline —-decorate —-color —-date-order
   d = diff --color-words
   dc = diff --cached
   dh = diff --color-words head
