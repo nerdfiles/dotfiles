@@ -17,6 +17,7 @@
 [repack]
   usedeltabaseoffset = true # >git 1.5
 [alias]
+  this = !git init && git add . && git commit -m \"initial commit\"
   s = status
   a = !git add . && git status
   au = !git add -u . && git status
@@ -45,6 +46,7 @@
   master = checkout master
   dev = checkout dev
   staging = checkout staging
+  r  = !git ls-files -z --deleted | xargs -0 git rm
   local = !git fetch origin && git reset --hard # origin/branch
   spull = svn rebase
   spush = svn dcommit
