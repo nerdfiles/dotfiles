@@ -17,10 +17,10 @@
 [repack]
   usedeltabaseoffset = true # >git 1.5
 [alias]
-  
+
   # git aliases
 
-  ## overview 
+  ## overview
 
   # 'this' quickly inits the repo that a pro
   this = !git init && git add . && git commit -m \"initial commit\"
@@ -72,17 +72,14 @@
   lg = log -p
 
   # 'lol' brings the lulz
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lol = log --source --graph --decorate --pretty=oneline --abbrev-commit
 
-  # 'lola' shows everything
-  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  # 'lola' expands HEAD to tag if present
+  lola = log --source --graph --decorate --pretty=oneline --abbrev-commit --all
 
   # 'l' shows history with times and users
-  l = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+  l = log --stat --decorate --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
 
-  # 'll' shows files updated with greater readability
-  ll = log --stat --abbrev-commit
-  
   ## merge management
   
   # 'absorb' should be used before 'merge' in situations where, say, 'master' branch may
