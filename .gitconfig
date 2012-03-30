@@ -19,8 +19,20 @@
 [alias]
   s = status
   a = !git add . && git status
+  #aa = !git ls-files -d | xargs -r git rm && git ls-files -m -o --exclude-standard | xargs -r git add  
   au = !git add -u . && git status
   aa = !git add . && git add -u . && git status
+  # 'add grep' stages all new+changed that match $1
+  ag = "!sh -c 'git ls-files -m -o --exclude-standard | grep $1 | xargs -r git add' -"
+  cg = "!sh -c 'git ls-files -m | grep $1 | xargs -r git checkout' -"
+  # 'diff grep' diffs any files that match $1
+  dg = "!sh -c 'git ls-files -m | grep $1 | xargs -r git diff' -"
+  # 'patch grep' diff --cached any files that match $1
+  pg = "!sh -c 'git ls-files -m | grep $1 | xargs -r git diff --cached' -"
+  # 'remove grep' remove any files that match $1
+  rmg = "!sh -c 'git ls-files -d | grep $1 | xargs -r git rm' -"
+  # 'reset grep' reset any files that match $1
+  rsg = "!sh -c 'git ls-files -c --with-tree=HEAD | grep $1 | xargs -r git reset HEAD -- ' -"
   c = commit
   cm = commit -m
   ca = commit --amend # careful
@@ -42,10 +54,19 @@
   master = checkout master
   dev = checkout dev
   staging = checkout staging
-  local = !git fetch origin && git reset --hard # origin/branch
+  wipe = !git fetch origin && git reset --hard # origin/branch
   spull = svn rebase
   spush = svn dcommit
+  absorb = !git merge -s recursive -X theirs # "merge from"
   alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+	switch = !legit switch \"$@\"
+	branches = !legit branches
+	sprout = !legit sprout \"$@\"
+	unpublish = !legit unpublish \"$@\"
+	harvest = !legit harvest \"$@\"
+	sync = !legit sync \"$@\"
+	publish = !legit publish \"$@\"
+	graft = !legit graft \"$@\"
 [diff]
   renames = copies
   # git does copy/rename *detection*. if you want it to track copies/renames:
