@@ -1,5 +1,4 @@
 [user]
-
   name = [name] 
   email = [email] 
   user = [user]
@@ -19,79 +18,187 @@
   usedeltabaseoffset = true # >git 1.5
 [alias]
   
-  
-  this = !git init && git add . && git commit -m \"initial commit\"
+  # git aliases
 
-  #
+  ## overview
+
+  # 'this' quickly inits the repo that a pro
+  this = !git init && git add . && git commit -m \"initial commit\"
+  
+  # 's' shows status of the project
   s = status
 
-  #
-  a = !git add -i . && git status
+  # 'ss' shows a list of tracked files and their statuses
+  ss = status -s
+
+  # 'cg' does?
+  cg = "!sh -c 'git ls-files -m | grep $1 | xargs -r git checkout' -"
+
+  ## removing and reseting files
+
+  # 'remove grep' remove any files that match $1
+  rmg = "!sh -c 'git ls-files -d | grep $1 | xargs -r git rm' -"
   
-  #
+  # 'reset grep' reset any files that match $1
+  rsg = "!sh -c 'git ls-files -c --with-tree=HEAD | grep $1 | xargs -r git reset HEAD -- ' -"
+
+  # 'unstage' does exactly that
+  unstage = !git reset HEAD --
+
+  ## staging
+
+  # 'a' adds by hunks
+  a = !git add -p . && git status
+
+  # 'au' stages all files and updates tracked files
   au = !git add -u . && git status
 
-  #
+  # 'aa' stages all files, stage
   aa = !git add . && git add -u . && git status
   #aa = !git ls-files -d | xargs -r git rm && git ls-files -m -o --exclude-standard | xargs -r git add  
   
   # 'add grep' stages all new+changed that match $1
   ag = "!sh -c 'git ls-files -m -o --exclude-standard | grep $1 | xargs -r git add' -"
+
+  # 'cm' comments on staged
+  cm = commit -m
+
+  # 'acm' stages all and comments
+  acm = !git add . && git commit -m
+
+  ## log management
+
+  # 'lg' shows log with changed lines
+  lg = log -p
+
+  # 'lol' brings the lulz
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+
+  # 'lola' shows everything
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+
+  # 'l' shows history with times and users
+  l = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+
+  # 'll' shows files updated with greater readability
+  ll = log --stat --abbrev-commit
   
-  cg = "!sh -c 'git ls-files -m | grep $1 | xargs -R git checkout' -"
+  ## merge management
+  
+  # 'absorb' should be used before 'merge' in situations where, say, 'master' branch may
+  # have preferred (not more recent, but possibly) changes than 'dev' branch
+  absorb = !git merge -s recursive -X theirs # "merge from"
+
+  ### diff
+
+  # 'diff color'
+  d = diff --color-words
+
+  # 'diff cached'
+  dc = diff --cached
+
+  # 'diff colorhead'
+  dh = diff --color-words head
 
   # 'diff grep' diffs any files that match $1
   dg = "!sh -c 'git ls-files -m | grep $1 | xargs -r git diff' -"
   
   # 'patch grep' diff --cached any files that match $1
   pg = "!sh -c 'git ls-files -m | grep $1 | xargs -r git diff --cached' -"
-  
-  # 'remove grep' remove any files that match $1
-  rmg = "!sh -c 'git ls-files -d | grep $1 | xargs -r git rm' -"
-  
-  # 'reset grep' reset any files that match $1
-  rsg = "!sh -c 'git ls-files -c --with-tree=HEAD | grep $1 | xargs -r git reset HEAD -- ' -"
-  
-  c = commit
-  cm = commit -m
-  ca = commit --amend # careful
-  ac = !git add . && git commit
-  acm = !git add . && git commit -m
-  lg = log -p
-  ls = ls-files
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-  l = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
-  lx = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  ll = log --stat --abbrev-commit
-  loga = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-  graph = log —-graph —-all —-pretty=oneline —-decorate —-color —-date-order
-  d = diff --color-words
-  dc = diff --cached
-  dh = diff --color-words head
+
+  ### tracking files
+
+  # 'untrack' temporarily ignores changes to selected file; @usage: $ git untrack {file}
   untrack = update-index --assume-unchanged
+
+  # 'track' restores tracking of changes to select file; @usage: $ git track {file}
   track = update-index --no-assume-unchanged
+
+  # 'hold' likely does the same thing as 'untrack'
+  hold = update-index --skip-worktree
+
+  # 'unhold' ditto!
+  unhold = update-index --no-skip-worktree
+
+  # 'held' shows those that have been set to skip-worktree;
+  # so use track/untrack to track and untrack files without being tracked about it
+  # i.e., hold/unhold is safer and you can know about it
+  held = !git ls-files -v | grep ^S
+
+  # 'ign' shows files without ignored
   ign = ls-files -o -i --exclude-standard
+
+  # 'r' shows deleted files
+  r  = !git ls-files -z --deleted | xargs -0 git rm  
+
+  # 'ls' shows tracked files without label
+  ls = ls-files
+
+  ## branch management
+
+  ### syncing
+
+  # @convention to $ git up
   up = push -u origin
+
+  # @convention to $ git down(, motherfucker!)
   down = pull -u origin
+
+  ### checkout
+
+  # @convention to quickly checkout 'master' branch
   master = checkout master
+
+  # @convention to quickly checkout 'dev' branch
   dev = checkout dev
+
+  # @convention to quickly checkout 'staging' branch
   staging = checkout staging
+
+  ### other
+
+  # 'wipe' undoes the $ git down
   wipe = !git fetch origin && git reset --hard # origin/branch
-  r  = !git ls-files -z --deleted | xargs -0 git rm
-  local = !git fetch origin && git reset --hard # origin/branch
+
+  ## svn shit
+  
+  # 'spull' rebases
   spull = svn rebase
+
+  # 'spush' dcommits
   spush = svn dcommit
-  absorb = !git merge -s recursive -X theirs # "merge from"
+
+  ## meta!
+  
+  # 'alias' shows all aliases
   alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
-	switch = !legit switch \"$@\"
+  
+  ## legit
+
+  # 'switch' does?
+  switch = !legit switch \"$@\"
+
+  # 'branches' does?
 	branches = !legit branches
-	sprout = !legit sprout \"$@\"
+
+  # 'sprout' does?
+  sprout = !legit sprout \"$@\"
+
+  # 'unpublish' does?
 	unpublish = !legit unpublish \"$@\"
+
+  # 'harvest' does? (something cool I hope!)
 	harvest = !legit harvest \"$@\"
+
+  # 'sync' does?
 	sync = !legit sync \"$@\"
+
+  # 'publish' does?
 	publish = !legit publish \"$@\"
+
+  # 'graft' does?
 	graft = !legit graft \"$@\"
+
 [diff]
   renames = copies
   # git does copy/rename *detection*. if you want it to track copies/renames:
