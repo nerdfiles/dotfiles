@@ -17,15 +17,28 @@
 [repack]
   usedeltabaseoffset = true # >git 1.5
 [alias]
+  
+  
   this = !git init && git add . && git commit -m \"initial commit\"
+
+  #
   s = status
-  a = !git add . && git status
-  #aa = !git ls-files -d | xargs -r git rm && git ls-files -m -o --exclude-standard | xargs -r git add  
+
+  #
+  a = !git add -i . && git status
+  
+  #
   au = !git add -u . && git status
+
+  #
   aa = !git add . && git add -u . && git status
+  #aa = !git ls-files -d | xargs -r git rm && git ls-files -m -o --exclude-standard | xargs -r git add  
+  
   # 'add grep' stages all new+changed that match $1
   ag = "!sh -c 'git ls-files -m -o --exclude-standard | grep $1 | xargs -r git add' -"
-  cg = "!sh -c 'git ls-files -m | grep $1 | xargs -r git checkout' -"
+  
+  cg = "!sh -c 'git ls-files -m | grep $1 | xargs -R git checkout' -"
+
   # 'diff grep' diffs any files that match $1
   dg = "!sh -c 'git ls-files -m | grep $1 | xargs -r git diff' -"
   # 'patch grep' diff --cached any files that match $1
