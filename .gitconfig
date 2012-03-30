@@ -17,6 +17,7 @@
 [repack]
   usedeltabaseoffset = true # >git 1.5
 [alias]
+  this = !git init && git add . && git commit -m \"initial commit\"
   s = status
   a = !git add . && git status
   #aa = !git ls-files -d | xargs -r git rm && git ls-files -m -o --exclude-standard | xargs -r git add  
@@ -43,11 +44,15 @@
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   l = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+  lx = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   ll = log --stat --abbrev-commit
+  loga = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  graph = log —-graph —-all —-pretty=oneline —-decorate —-color —-date-order
   d = diff --color-words
   dc = diff --cached
   dh = diff --color-words head
   untrack = update-index --assume-unchanged
+  track = update-index --no-assume-unchanged
   ign = ls-files -o -i --exclude-standard
   up = push -u origin
   down = pull -u origin
@@ -55,6 +60,8 @@
   dev = checkout dev
   staging = checkout staging
   wipe = !git fetch origin && git reset --hard # origin/branch
+  r  = !git ls-files -z --deleted | xargs -0 git rm
+  local = !git fetch origin && git reset --hard # origin/branch
   spull = svn rebase
   spush = svn dcommit
   absorb = !git merge -s recursive -X theirs # "merge from"
