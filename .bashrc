@@ -1,100 +1,113 @@
+#!/bin/bash
+
+source ~/.bash_profile
+
+[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
+
+alias mutt='/opt/local/bin/mutt'
+
 # ============================================= VIRTUALENV/WRAPPER == #
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Sites
 export VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/2.7/bin/python
+#export VIRTUALENVWRAPPER_PYTHON=/Users/nerdfiles/.pythonbrew/pythons/Python-2.7.2/bin/python
 export PIP_VIRTUALENV_BASE=$WORKON_HOME # Tell pip to create its virtualenvs in $WORKON_HOME.
-export PIP_REQUIRE_VIRTUALENV=true
-export PIP_RESPECT_VIRTUALENV=true # Tell pip to automatically use the currently active virtualenv.
+#export PIP_REQUIRE_VIRTUALENV=true
+#export PIP_RESPECT_VIRTUALENV=true # Tell pip to automatically use the currently active virtualenv.
+# http://keito.me/tutorials/macosx_path
+export PATH=/usr/local/bin:/Library/PostgreSQL/8.4/bin:$PATH
 
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
   source /usr/local/bin/virtualenvwrapper.sh
 fi
 
+function githubthis() {
+  #curl -u $1:$2 https://api.github.com/user/repos -d "{\"name\":\"$3\"}"
+  curl -u $1 https://api.github.com/user/repos -d "{\"name\":\"$2\"}"
+}
+
+function gitin() {
+
+  # USAGE:
+  # $ gitin 'USER' 'REPO'
+
+  touch readme.markdown
+  touch .gitignore
+  touch .requirements
+  mkdir .downloads
+  touch .downloads/.empty
+
+  # init project folder
+  git this; 
+  
+  # add repo url
+  git hubbed git@github.com:$1/$2.git; 
+
+  # create repo on host
+  githubthis $1 $2; 
+
+  # first up
+  git up master;
+
+}
+
 # ============================================= NODE == #
 
-NODE_PATH="/Users/pbdigital/Developer/lib/node_modules"
-export NODE_PATH
+export NODE_PATH="/usr/local/lib/node_modules"
 
 # ============================================= PYTHON == #
 
-alias servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
-export NODE_PATH="/usr/local/lib/node_modules"
+function work() {
+  debug=0
+  cur="$PWD"
+  s=$cur
+  set -- "$s" 
+  IFS="/"; declare -a Array=($*) 
+  len=${#Array[@]}
+  len=($len-1)
+  proj=${Array[$len]}
+  proj=${proj/"-"/"_"}
+  
+  if [[ ! -d "$HOME/.virtualenvs/$proj" && ! -L "$HOME/.virtualenvs/$proj" ]]; then
+    mkvirtualenv --no-site-packages --distribute $proj
+  fi
 
-function set_django() {
-    # add the current directory and the parent directory to PYTHONPATH
-    # sets DJANGO_SETTINGS_MODULE
-    export PYTHONPATH=$PYTHONPATH:$PWD/..
-    export PYTHONPATH=$PYTHONPATH:$PWD
-    if [ -z "$1" ]; then 
-        x=${PWD/\/[^\/]*\/}
-        export DJANGO_SETTINGS_MODULE=$x.settings
-    else    
-        export DJANGO_SETTINGS_MODULE=$1
+  if [[ -d "$HOME/.virtualenvs/$proj" ]]; then
+    workon $proj
+
+    echo "Now working with: "
+    echo "~/.virtualenvs/$proj/bin/python"
+    echo "~/.vi"
+    cpy
+    if [ $debug ]
+    then
+      echo 'nana'
+    else
+      which python
     fi
-
-        echo "DJANGO_SETTINGS_MODULE set to $DJANGO_SETTINGS_MODULE"
+  fi
 }
 
-# ============================================= ALIASES == #
+# general path munging
+PATH=${PATH}:~/bin
+PATH=${PATH}:/usr/local/bin
 
-alias macvim='open -a /Applications/MacVim/MacVim.app/Contents/MacOS/MacVim'
-alias ntp="sudo /usr/sbin/ntpdate time-a.nist.gov"
-#alias nano='nano -w'
-alias vim='vim -X'
-#alias xcomp='xcompmgr -cCfF -r7 -o.65 -l-10 -t-8 -D7'
-#alias m='mate'
-#alias ss='./script/server'
+# postgres
+export PATH=${PATH}:/usr/local/pgsql/bin
+export PGDATA=/usr/local/pgsql/data
 
-alias jangy='python manage.py'
-alias jangyrun='python manage.py runserver'
-alias jangyshell='python manage.py shell'
-alias jangysql='python manage.py sql'
-alias jangysqlall='python manage.py sqlall'
-alias jangystartapp='django-admin.py startapp'
-alias jangystartproject='django-admin.py startproject'
-alias jangysync='python manage.py syncdb'
-alias jangydump='python manage.py dumpdata'
-alias jangyload='python manage.py loaddata'
-alias jangycleanup='python manage.py cleanup'
-alias jangyflush='python manage.py flush'
-alias jangydbshell='python manage.py dbshell'
-alias jangyinspect='python manage.py inspectdb'
-alias jangymigrate='python manage.py migrate'
-alias jangyschemamigration='python manage.py schemamigration'
-alias jangyevolve='python manage.py evolve --hint --execute'
-alias jangygenfix='python manage.py generate_fixture'
-alias jangydumpobj='python manage.py dump_object'
+# configure my multi-line prompt
+#$PS1="\[\033[G\]$PS1"
+#PS1='
+#$PWD
+#==> '
 
-alias pbrew='pythonbrew'
-alias compassing='compass watch compass'
-alias touchcompass='compass create compass'
-alias fuck_it="git commit -am 'cleanup docs ubuntu version'; git push origin dev; fab sync_staging; fab pull_staging; git checkout dev"
-
-alias suspend='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
-
-# == Dir navigation == #
-
-alias ..='cd ..'
-alias .='pwd'
-alias ~='cd ~'
-alias more='less'
-
-# == LS 
-
-alias lsl='ls -mrA' # "list"
-alias lsL='ls -s | more'
-alias lsa='ls -lar' # all
-alias lsr='ls -spr' # reverse alpha
-alias lsR='ls -R'
-alias lsp='ls -p' # column dir
-
-# == File/Dir Managemenet == #
-
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-alias mkdir='mkdir -p'
+#-----#
+# X11 #
+#-----#
+export DISPLAY=:0.0
+PATH=${PATH}:/usr/X11R6/bin
 
 # ============================================= COLORS == #
 
@@ -116,22 +129,6 @@ DIR_STICKY=ex
 DIR_WO_STICKY=hx
 export LSCOLORS="$DIR$SYM_LINK$SOCKET$PIPE$EXE$BLOCK_SP$CHAR_SP$EXE_SUID$EXE_GUID$DIR_STICKY$DIR_WO_STICKY"
 export CLICOLOR="YES"
-
-# == Aliases == #
-
-alias grep='grep --color=auto'
-
-# ============================================= UNICODE == #
-
-#alias xterm='xterm -u8'
-#alias screen='screen -U'
-
-# ============================================= SUDO == #
-
-#alias root='sudo su'
-#alias pacman='sudo pacman'
-#alias apt-get='sudo apt-get'
-#alias aptitude='sudo aptitude'
 
 # ============================================= CONSOLE == #
 
@@ -164,6 +161,219 @@ if [ -f ~/.dir_colors ]; then
   eval `dircolors ~/.dir_colors`
 fi
 
-# ============================================= BASH? == #
 
-source ~/.bash_profile
+#function _update_ps1()
+#{
+#   export PS1="$(~/powerline-bash.py $?)"
+#}
+
+# Poweline style bash prompt!
+#export PROMPT_COMMAND="_update_ps1"
+
+# ============================================= ALIASES == #
+
+alias factit="elinks -dump randomfunfacts.com | sed -n '/^| /p' | tr -d \|"
+#alias fact='echo ""; factit; echo "";'
+alias factoid="factit | pbcopy"
+function fact() {
+  factoid;
+  pbpaste > ~/.facts;
+  echo "";
+  pbpaste;
+  echo "";
+}
+
+alias servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
+alias cpy='python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()" | pbcopy'
+alias suspend='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
+
+# == Dir navigation == #
+
+alias ..='cd ..'
+alias .='pwd'
+alias ~='cd ~'
+alias more='less'
+
+# the "kp" alias ("que pasa"), in honor of tony p.
+alias kp="ps auxwww"
+alias ss="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background &"
+
+# == LS 
+
+alias lsl='ls -mrA' # "list"
+alias lsL='ls -s | more'
+alias lsa='ls -lar' # all
+alias lsr='ls -spr' # reverse alpha
+alias lsR='ls -R'
+alias lsp='ls -p' # column dir
+alias l='ls -AlGFh'
+
+# == File/Dir Managemenet == #
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias mkdir='mkdir -p'
+
+# ============================================= MORE ALIASES == #
+
+alias ntp="sudo /usr/sbin/ntpdate time-a.nist.gov"
+alias vim='vim -X'
+alias m='mate'
+alias grep='grep --color=auto'
+
+# ============================================= UNICODE == #
+
+#alias xterm='xterm -u8'
+#alias screen='screen -U'
+
+# ============================================= SUDO == #
+
+#alias root='sudo su'
+#alias pacman='sudo pacman'
+#alias apt-get='sudo apt-get'
+#alias aptitude='sudo aptitude'
+
+alias pbrew='pythonbrew'
+
+# Compass
+#########
+
+alias compassing='rvm use 1.9.3-p125; compass watch compass'
+alias touchcompass='rvm use 1.9.3-p125; compass create compass'
+
+alias glr='git pull --rebase && fact'
+alias fuck_it="git commit -am 'cleanup docs ubuntu version'; git push origin dev; fab sync_staging; fab pull_staging; git checkout dev"
+alias gitcleanup="git aa; git acm 'cleanup'; git up dev; git checkout master; git down master; git merge dev; git up master; git checkout dev;"
+alias sup="top -o cpu"
+alias io='sudo iosnoop'
+alias exe='sudo execsnoop'
+alias _iotop='sudo iotop -CP 1'
+alias syshack='man -k dtrace'
+
+alias nightlychrome='open -a Nightly\ Chrome.app'
+alias hiddenchrome='open -a Nightly\ Chrome.app --args --incognito'
+
+alias kippt='workon kipptin; python ~/Sites/kipptin/kippthon/main.py'
+
+source $HOME/.gvm/scripts/gvm
+export PATH="$HOME/Library/Haskell/bin:$PATH"
+PATH=$HOME/.cabal/bin:$PATH
+
+alias ported='lsof -i | grep LISTEN'
+
+alias macvim='mvim'
+
+alias opclean='sudo sh /etc/periodic/weekly/*;sudo sh /etc/periodic/daily/*;sudo sh /etc/periodic/monthly/*'
+
+# Start up MongoDB using a forked process and log appending 
+alias mongostart='/var/mongodb/bin/mongod --fork --dbpath /var/mongodb/data/db --logpath /var/mongodb/log/mongodb.log --logappend' 
+# Shut down MongoDB safely using the soft kill on the PID 
+alias mongostop="kill -2 `ps aux | grep [m]ongo* | awk '{ print $2 }'`"
+
+alias redisstart='launchctl start io.redis.redis-server'
+alias redisstop='launchctl stop io.redis.redis-server'
+
+#alias kipptin='sendmail inbox+Dzexw08fXIzzwPTf5hsUe7ZTvQH@kippt.it'
+#alias readlater='sendmail readlater+Dzexw08fXIzzwPTf5hsUe7ZTvQH@kippt.it'
+
+#alias prepmail='(cat <<EOCAT'
+
+# echo "<b>HTML Message goes here</b>" | mail -s "$(echo -e "This is the subject\nContent-Type: text/html")" foo@example.com
+
+function prepmail() {
+  #echo "$1" | mail -s "$(echo -e "$2\nContent-Type: text/html\nMIME-Version: 1.0\nFrom: \"Aharon <nerdfiles@gmail.com>\"")" $3
+  #( 
+  #echo "From: nerdfiles <nerdfiles@gmail.com>"
+  #echo "To: $3"; echo "MIME-Version: 1.0"
+  #echo "Content-Type: text/html" 
+  #echo "Subject: $2" 
+  #echo ""
+  #echo "$1"
+  #) | sendmail -t
+  echo "$1" | mutt -e 'set content_type="text/html"' $3 -s "$2"
+}
+
+function kipptin() {
+  echo "$1" | mutt -e 'set content_type="text/html"' inbox+Dzexw08fXIzzwPTf5hsUe7ZTvQH@kippt.it -s "Kippt it!"
+}
+
+function readlater() {
+  echo "$1" | mutt -e 'set content_type="text/html"' readlater+Dzexw08fXIzzwPTf5hsUe7ZTvQH@kippt.it -s "Kippt it!"
+}
+
+#MAIL=/var/spool/mail/nerdfiles && export MAIL
+MAIL=/val/spool/postfix/active && export MAIL
+
+alias mate='open -a TextMate.app; echo "Opening TextMate 2...";'
+alias sublime='open -a Sublime\ Text\ 2.app; echo "Opening Sublime Text 2...'
+alias gridwars='open -a gridwars.app; echo "You really should be working, sir."'
+alias bbt2='open -a BBT2.app; echo "Opening BBT2...";'
+alias burnnn='open -a Burn.app; echo "Burn something good."'
+alias byword='open -a Byword.app'
+alias theautomator='open -a Automator.app'
+alias photoshop='open -a Adobe\ Photoshop\ CS5.app'
+alias lightroom='open -a Adobe\ Lightroom\ 3.app'
+export EDITOR=macvim
+source "`brew --prefix grc`/etc/grc.bashrc"
+[ -s "/Users/nerdfiles/.scm_breeze/scm_breeze.sh" ] && source "/Users/nerdfiles/.scm_breeze/scm_breeze.sh"
+
+#alias gmvault='/Users/nerdfiles/.virtualenvs/gmvault/bin/gmvault'
+
+# Django Aliases
+################
+
+alias jangy='python manage.py'
+alias jangyrun='find . -name "*.pyc" -exec rm "{}" ";"; echo "Recursively removed *.pyc files!"; python manage.py clearcache; python manage.py runserver_plus'
+alias jangyshell='python manage.py shell'
+alias jangysql='python manage.py sql'
+alias jangysqlall='python manage.py sqlall'
+alias jangystartapp='django-admin.py startapp'
+alias jangystartproject='django-admin.py startproject'
+alias jangysync='python manage.py syncdb'
+alias jangydump='python manage.py dumpdata --exclude=contenttypes --natural'
+alias jangyload='python manage.py loaddata'
+alias jangycleanup='python manage.py cleanup'
+alias jangyflush='python manage.py flush'
+alias jangydbshell='python manage.py dbshell'
+alias jangyinspect='python manage.py inspectdb'
+alias jangymigrate='python manage.py migrate'
+alias jangyschemamigration='python manage.py schemamigration'
+alias jangyevolve='python manage.py evolve --hint --execute'
+alias jangygenfix='python manage.py generate_fixture'
+alias jangydumpobj='python manage.py dump_object'
+
+
+# CoffeeScript Aliases 
+######################
+
+alias makecoffee='coffee --compile --output' # lib/ src/
+alias brewcoffee='coffee --watch --compile' # file.coffee
+alias grindcoffee='coffee --join project.js --compile' # src/*.coffee
+alias pourcoffee='coffee -bpe'
+alias servecoffee='coffee -o lib/ -cw src/'
+
+
+PATH=/usr/local/bin:/usr/local/sbin:${PATH}
+
+function snapsnap() {
+  #ddd = date 
+  imagesnap -q /Users/nerdfiles/Desktop/clams/snaps/$1;
+}
+
+#alias snapsnap='snap'
+alias dconnect='sudo ifconfig en1 down'
+alias rconnect='sudo ifconfig en1 up'
+alias spoof='sudo ifconfig en1 ether'
+alias somegems='rvm list gemsets'
+alias whoser='rvm gemset list'
+alias rover='rvm info'
+
+alias py?='which python'
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+alias twat="sh twat.sh"
+
+echo ""; cat ~/.facts; echo "";
+
