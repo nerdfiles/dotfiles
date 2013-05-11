@@ -1,7 +1,7 @@
 [user]
-	name = nerdfiles
-	email = nerdfiles@gmail.com
-	user = nerdfiles
+  name = nerdfiles
+  email = nerdfiles@gmail.com
+  user = nerdfiles
 [core]
   excludesfile = /Users/nerdfiles/.gitignore
   legacyheaders = false # >git 1.5
