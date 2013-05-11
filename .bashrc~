@@ -189,10 +189,57 @@ alias suspend='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Res
 
 # == Dir navigation == #
 
+## get rid of command not found ##
+alias cd..='cd ..'
+ 
+## a quick way to get out of current directory ##
 alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
 alias .='pwd'
 alias ~='cd ~'
 alias more='less'
+
+alias bc='bc -l'
+alias sha1='openssl sha1'
+function genpass() {
+  openssl rand -base64 $1 | cut -c1-$1
+}
+alias mount='mount |column -t'
+alias unmount='sudo diskutil umount force'
+# handy short cuts #
+alias h='history'
+alias j='jobs -l'
+
+alias path='echo -e ${PATH//:/\\n}'
+alias now='date +"%T'
+alias nowtime=now
+alias nowdate='date +"%d-%m-%Y"'
+
+# Stop after sending count ECHO_REQUEST packets #
+alias ping='ping -c 5'
+# Do not wait interval 1 second, go fast #
+alias fastping='ping -c 100 -s.2'
+
+# get web server headers #
+alias header='curl -I'
+ 
+# find out if remote server supports gzip / mod_deflate or not #
+alias headerc='curl -I --compress'
+
+# become root #
+alias root='sudo -i'
+alias su='sudo -i'
+
+# play all music files from the current directory #
+#alias playwave='for i in *.wav; do mplayer "$i"; done'
+#alias playogg='for i in *.ogg; do mplayer "$i"; done'
+#alias playmp3='for i in *.mp3; do mplayer "$i"; done'
+
+alias wget='wget -c'
 
 # the "kp" alias ("que pasa"), in honor of tony p.
 alias kp="ps auxwww"
@@ -207,13 +254,15 @@ alias lsr='ls -spr' # reverse alpha
 alias lsR='ls -R'
 alias lsp='ls -p' # column dir
 alias l='ls -AlGFh'
+## Show hidden files ##
+alias l.='ls -d .* --color=auto'
 
 # == File/Dir Managemenet == #
 
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias mkdir='mkdir -p'
+alias mkdir='mkdir -pv'
 
 # ============================================= MORE ALIASES == #
 
@@ -376,4 +425,148 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 alias twat="sh twat.sh"
 
 echo ""; cat ~/.facts; echo "";
+
+#logout() {
+#  osascript -e 'tell application "System Events" to log out'
+#  builtin logout
+#}
+
+#function topcmds() {
+#  history | awk '{print $2}' | awk 'BEGIN {FS="|"}{print $1}' | sort | uniq -c | sort -nr | head
+#}
+
+function topcmds() {
+  history | awk 'BEGIN {FS="[ \t]+|\\|"} {print $3}' | sort | uniq -c | sort -nr | head
+}
+
+#trap 'fact; exit 0' 0
+#fact
+alias nerds!="ssh nerdfiles@nerdfiles.net"
+alias lynx='/Applications/Lynxlet.app/Contents/Resources/lynx/bin/lynx'
+
+function got() {
+  lynx http://google.com?q="$1"
+}
+alias dumplinks="elinks -dump"
+alias startwars="telnet towel.blinkenlights.nl"
+alias ql="qlmanage -p"
+#alias enable_spotlight="sudo chmod 755 /System/Library/CoreServices/Spotlight.app"
+#alias disable_spotlight="sudo chmod 0 /System/Library/CoreServices/Spotlight.app"
+alias dir="ls -R | grep \":$\" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
+
+function mkalias() {
+  echo "$1" >> ~/.bashrc
+}
+
+alias getinfo="/Users/nerdfiles/getinfo.sh"
+
+function __mode_single() {
+  defaults write com.apple.dock single-app -bool true 
+  killall Dock 
+}
+
+function __mode_multi() {
+  defaults delete com.apple.dock single-app
+  killall Dock 
+}
+
+function sshtunnel() {
+  ssh -D 8080 -f -C -q -N $1@$2 #ssh -f $1@$2 -L 2000:$2:25 -N
+}
+
+function smithing() {
+
+  # recursively
+  if [[ $1 == '__recursively' ]]; then
+    find . -type f -exec grep -il "$2" {} \;
+  fi
+
+  #or if you know the file type
+  if [[ $1 == '__typically' ]]; then
+    find . -type f -user nerdfiles -name "*.$3" -exec grep -il "$2" {} \;
+  fi
+  # and/ or if you just want your files
+  if [[ $1 == '__aimlessly' ]]; then
+      find . -type f -name "*.$3" -exec grep -il "$2" {} \;
+  fi
+
+}
+
+alias fb='fbcmd'
+alias fql='fb FQL'
+
+function fb_post() {
+  fb WALLPOST "$1" "$2"
+}
+
+function fb_post_img() {
+  fb WALLPOST "$1" IMG 0 "$2" 0
+}
+
+alias fb_posts='fb FQL "SELECT status_id,message,time,source FROM status WHERE uid=[me]" | less'
+
+alias fb_wall='fb FSTREAM =me'
+alias fb_wall_new='fb FSTREAM =me new'
+
+alias fb_threads='fb FQL "SELECT thread_id, subject, recipients, snippet FROM thread WHERE folder_id = 0" | less'
+
+alias fb_inbox='fb INBOX -tid | less'
+
+alias fb_harvest='fb FSTATUS | less' # harvest statuses
+alias fb_harvest_links='fb FSTATUS | urlview'
+alias fb_harvest_posts_links='fb FQL "SELECT status_id,message,time,source FROM status WHERE uid=[me]" | urlview'
+
+alias fb_recent='fb RECENT | less' # recently touched
+
+alias fb_lsq='fb STREAM 1 20 | less' # quick harvest of touched
+
+
+# fb_link
+# 
+# message = $1
+# name = $2
+# link = $3
+
+function fb_link() {
+  
+  fb POST "$1" "$2" "$3"
+
+}
+
+function fb_img_cap() {
+  fb POST IMG "$1" "$2" "$3"
+}
+
+function fb_img() {
+  fb POST IMG 0 "$1" 0
+}
+
+alias fb_co='fb COMMENT'
+
+#alias fb_ls='fb STREAM 1'
+function fb_ls() {
+  fb STREAM 1 $1 | less
+}
+
+#alias fb_lookup='fb ALLINFO'
+function fb_lookup() {
+  fb ALLINFO $1 | less
+}
+
+alias fb_online='echo "# -*- viewing: Creeps -*- #"; fb FONLINE | less'
+
+alias surf_hn='open http://news.ycombinator.com'
+alias surf_hn_new='open http://news.ycombinator.com/newest'
+alias surf_slashdot='open http://slashdot.org'
+alias surf_bash='open http://bash.org/?latest'
+alias surf_soundcloud='open http://soundcloud.com/nerdfiles'
+alias surf_webjournal='open http://webjournal.nerdfiles.net/'
+alias surf_webjournal_dash='open http://webjournal.nerdfiles.net/wp-admin/'
+alias surf_bristow='open http://bristowgroup.com/'
+alias surf_bristow_dash='open http://bristowgroup.com/dashboard'
+alias surf_github='open http://github.com/'
+alias surf_nerds!='open http://nerdfiles.net'
+alias surf_nerds_dash='open http://nerdfiles.net/dashboard'
+alias surf_webhost='open http://my.webfaction.com/'
+alias html5='python /Users/nerdfiles/Tools/html5check.py'
 

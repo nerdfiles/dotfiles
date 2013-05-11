@@ -568,5 +568,6 @@ alias surf_github='open http://github.com/'
 alias surf_nerds!='open http://nerdfiles.net'
 alias surf_nerds_dash='open http://nerdfiles.net/dashboard'
 alias surf_webhost='open http://my.webfaction.com/'
+alias html5='python /Users/nerdfiles/Tools/html5check.py'
 
 
