@@ -38,7 +38,7 @@
   prune-all = !git remote | xargs -n 1 git remote prune
   # git funcdiff <old-rev> <new-rev> <path> <function>
   # funcdiff = '!sh -c "git show \"\$0:\$2\" | sed -n \"/^[^ \t].*\$3[ \t]*(/,/^}/p\" > .tmp1 && git show \"\$1:\$2\" | sed -n \"/^[^ \t].*\$3[ \t]*(/,/^}/p\" > .tmp2 && git diff --no-index .tmp1 .tmp2"'
-  # USAGE: git tips brand ^brandother | git oneline
+  # USAGE: git tips branch ^branch-other | git oneline
   oneline ="!_() { $(test $# -eq 0 && echo xargs -L1) git log --no-walk --decorate --oneline \"$@\"; }; _"
   tips = "!_() { t=$(git rev-list --no-merges --max-count=1 \"$@\"); if test -n \"$t\"; then echo $t; _ \"$@\" ^$t; fi; }; _"
   deleted = ls-files --deleted
