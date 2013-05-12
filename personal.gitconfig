@@ -21,11 +21,14 @@
   enabled = true
 [alias]
   ls = !sh -c 'ls $2 $1' -
-  visualize-repo = !sh -c 'git gviz --first-parent master | dot -Tpdf -o visualize/repo.pdf'
-  visualize-commits = !sh -c 'git gviz HEAD~$1..HEAD~$2 | dot -Tpdf -o visualize/commits.pdf'
+  graph-repo = !sh -c 'git gviz --first-parent master | dot -Tpdf -o graphs/git/repo.pdf'
+  graph-commits = !sh -c 'git gviz HEAD~$1..HEAD~$2 | dot -Tpdf -o graphs/git/commits.pdf'
   # sort out https://code.djangoproject.com/wiki/DjangoGraphviz and 
   # @note http://stackoverflow.com/questions/6597335/installing-pygraphviz-on-os-10-6-7-python-2-6-gcc-4-2-error
-  visualize-models = !sh -c 'git s'
+  graph-all-models = !python manage.py graph_models --settings=settings.local -a -g -o graphs/app/models.pdf
+  graph-app-models = !python manage.py graph_models --settings=settings.local $1 -o graphs/app/$1.models.pdf
+  # @USAGE: git graph-apps-models app1 app2 -o graphs/app/descriptive-filename.pdf
+  graph-apps-models = "!python manage.py graph_models --settings=settings.local"
   edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
   add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
   sortdiff = !sh -c 'git diff "$@" | grep "^[+-]" | sort --key=1.2 | uniq -u -s1'
