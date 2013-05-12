@@ -7,9 +7,11 @@
   legacyheaders = false # >git 1.5
   quotepath = false
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  pager = less -r
+  # http://stackoverflow.com/questions/136178/git-diff-handling-long-lines
   editor='mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
   visual='mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
+  pager = less -r
+  # if ↑ doesn’t work, try: pager = less -+$LESS -FRX
 [color]
   ui = auto
   interactive = auto
@@ -19,6 +21,11 @@
   enabled = true
 [alias]
   ls = !sh -c 'ls $2 $1' -
+  visualize-repo = !sh -c 'git gviz --first-parent master | dot -Tpdf -o visualize/repo.pdf'
+  visualize-commits = !sh -c 'git gviz HEAD~$1..HEAD~$2 | dot -Tpdf -o visualize/commits.pdf'
+  # sort out https://code.djangoproject.com/wiki/DjangoGraphviz and 
+  # @note http://stackoverflow.com/questions/6597335/installing-pygraphviz-on-os-10-6-7-python-2-6-gcc-4-2-error
+  visualize-models = !sh -c 'git s'
   edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
   add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
   sortdiff = !sh -c 'git diff "$@" | grep "^[+-]" | sort --key=1.2 | uniq -u -s1'
@@ -59,7 +66,8 @@
   le = log --oneline --decorate
   lo = log --graph --pretty=format:'%C(yellow)%h%Creset%C(blue)%d%Creset %C(white bold)%s%Creset %C(white dim)(by %an %ar)%Creset'
   lb = log --graph --simplify-by-decoration --pretty=format:'%d' --all
-  graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+  gviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+  conflicts = !git ls-files --unmerged | cut -f2 | uniq  
   whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
   whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
   filelog = log -u
@@ -119,19 +127,19 @@
   mergedown = !git acm "\\#mergedown" && git up master && git checkout
   alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
   tree = "forest --pretty=format:\"%C(red)%h %C(magenta)(%ar) %C(blue)%an %C(reset)%s\" --style=15 --reverse"
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
   lg1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
   lg2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit
   lg3 = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
   llog = log --date=local
-	switch = !legit switch \"$@\"
-	branches = !legit branches
-	sprout = !legit sprout \"$@\"
-	unpublish = !legit unpublish \"$@\"
-	harvest = !legit harvest \"$@\"
-	sync = !legit sync \"$@\"
-	publish = !legit publish \"$@\"
-	graft = !legit graft \"$@\"
+  switch = !legit switch \"$@\"
+  branches = !legit branches
+  sprout = !legit sprout \"$@\"
+  unpublish = !legit unpublish \"$@\"
+  harvest = !legit harvest \"$@\"
+  sync = !legit sync \"$@\"
+  publish = !legit publish \"$@\"
+  graft = !legit graft \"$@\"
   ignore="!f() { [ -z "$@" ] && echo "git: usage git ignore [file]" || ( ([ ! -e .gitignore ] && touch .gitignore); echo $1 >>.gitignore && echo "Ignoring file $1" && git rm --cached "$@" > /dev/null 2>&1 && git st ); }; f"
   freeze="!f() { ( [ -z $@ ] && git add -A || git add -A "$@" ) && git st; }; f"
   unfreeze="!f() { ([ -z "$@" ] && (git reset -q HEAD > /dev/null 2>&1 || echo "first commit must be unfrozen file by file. better error message coming soon") || (git reset -q HEAD -- $@ > /dev/null 2>&1 || git rm -q --cached $@ ) ) && git st; }; f"
@@ -139,7 +147,7 @@
   history=log
   d="!git log --diff-filter=D --summary"
   del="!git log --diff-filter=D --summary | grep delete"
-	wip = "!f() { git add -A; git ls-files --deleted -z | xargs -0 -r git rm; s=`git show --format=%s HEAD | head -1`; if [ \"wip\" = \"$s\" ]; then git commit --amend -m \"wip\"; else git commit -m \"wip\"; fi;}; f"
+  wip = "!f() { git add -A; git ls-files --deleted -z | xargs -0 -r git rm; s=`git show --format=%s HEAD | head -1`; if [ \"wip\" = \"$s\" ]; then git commit --amend -m \"wip\"; else git commit -m \"wip\"; fi;}; f"
   fixup = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
   squash = !sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
   ri = rebase --interactive --autosquash
@@ -160,4 +168,4 @@
   changed = green
   untracked = cyan
 [push]
-	default = simple
+  default = simple
